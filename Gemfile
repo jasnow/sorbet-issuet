@@ -26,8 +26,10 @@ gem 'jbuilder', '~> 2.5'
 # Add sorbet to the app
 gem 'sorbet-runtime'
 gem 'sorbet-rails'
+gem 'dalli'  # 7/15/2019: Added for 'sorbet'
+gem 'redis'  # 7/15/2019: Added for 'sorbet'
+
 # Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

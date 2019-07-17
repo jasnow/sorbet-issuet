@@ -6101,6 +6101,10 @@ end
 class Bundler::Graph
 end
 
+class Bundler::Index
+  include ::Enumerable
+end
+
 class Bundler::Injector
   def initialize(deps, options=T.unsafe(nil)); end
 
@@ -6154,6 +6158,14 @@ end
 
 module Bundler::Molinillo::Delegates
   extend ::T::Sig
+end
+
+class Bundler::Molinillo::DependencyGraph
+  include ::Enumerable
+end
+
+class Bundler::Molinillo::DependencyGraph::Log
+  extend ::Enumerable
 end
 
 module Bundler::Molinillo::SpecificationProvider
@@ -6449,6 +6461,10 @@ end
 
 module Bundler::SharedHelpers
   extend ::T::Sig
+end
+
+class Bundler::SpecSet
+  include ::Enumerable
 end
 
 class Bundler::UI::RGProxy
@@ -17149,8 +17165,6 @@ module Net::HTTP::ProxyDelta
   extend ::T::Sig
 end
 
-Net::HTTP::ProxyMod = Net::HTTP::ProxyDelta
-
 class Net::HTTP::Put
   extend ::T::Sig
 end
@@ -17190,13 +17204,17 @@ class Net::HTTPBadResponse
   extend ::T::Sig
 end
 
-Net::HTTPClientError::EXCEPTION_TYPE = Net::HTTPServerException
-
 class Net::HTTPClientError
   extend ::T::Sig
 end
 
-Net::HTTPClientErrorCode = Net::HTTPClientError
+class Net::HTTPClientError
+end
+
+Net::HTTPClientErrorCode::EXCEPTION_TYPE = Net::HTTPServerException
+
+class Net::HTTPClientError
+end
 
 Net::HTTPClientException = Net::HTTPServerException
 
@@ -17430,8 +17448,6 @@ end
 class Net::HTTPRangeNotSatisfiable
 end
 
-Net::HTTPRedirection::EXCEPTION_TYPE = Net::HTTPRetriableError
-
 class Net::HTTPRedirection
   extend ::T::Sig
 end
@@ -17477,7 +17493,13 @@ class Net::HTTPResponse
   extend ::T::Sig
 end
 
-Net::HTTPRetriableCode = Net::HTTPRedirection
+class Net::HTTPRedirection
+end
+
+Net::HTTPRetriableCode::EXCEPTION_TYPE = Net::HTTPRetriableError
+
+class Net::HTTPRedirection
+end
 
 class Net::HTTPRetriableError
   extend ::T::Sig
@@ -17487,13 +17509,17 @@ class Net::HTTPSeeOther
   extend ::T::Sig
 end
 
-Net::HTTPServerError::EXCEPTION_TYPE = Net::HTTPFatalError
-
 class Net::HTTPServerError
   extend ::T::Sig
 end
 
-Net::HTTPServerErrorCode = Net::HTTPServerError
+class Net::HTTPServerError
+end
+
+Net::HTTPServerErrorCode::EXCEPTION_TYPE = Net::HTTPFatalError
+
+class Net::HTTPServerError
+end
 
 class Net::HTTPServerException
   extend ::T::Sig
@@ -17503,15 +17529,27 @@ class Net::HTTPServiceUnavailable
   extend ::T::Sig
 end
 
-Net::HTTPSession = Net::HTTP
+class Net::HTTP
+end
 
-Net::HTTPSuccess::EXCEPTION_TYPE = Net::HTTPError
+Net::HTTPSession::ProxyDelta = Net::HTTP::ProxyDelta
+
+Net::HTTPSession::ProxyMod = Net::HTTP::ProxyDelta
+
+class Net::HTTP
+end
 
 class Net::HTTPSuccess
   extend ::T::Sig
 end
 
-Net::HTTPSuccessCode = Net::HTTPSuccess
+class Net::HTTPSuccess
+end
+
+Net::HTTPSuccessCode::EXCEPTION_TYPE = Net::HTTPError
+
+class Net::HTTPSuccess
+end
 
 class Net::HTTPSwitchProtocol
   extend ::T::Sig
@@ -23162,6 +23200,8 @@ module Regexp::Syntax::Token::UnicodeProperty
   Age_V2_4_0 = ::T.let(nil, ::T.untyped)
   Age_V2_5_0 = ::T.let(nil, ::T.untyped)
   Age_V2_6_0 = ::T.let(nil, ::T.untyped)
+  Age_V2_6_2 = ::T.let(nil, ::T.untyped)
+  Age_V2_6_3 = ::T.let(nil, ::T.untyped)
   All = ::T.let(nil, ::T.untyped)
   CharType_V1_9_0 = ::T.let(nil, ::T.untyped)
   CharType_V2_5_0 = ::T.let(nil, ::T.untyped)
@@ -23183,6 +23223,7 @@ module Regexp::Syntax::Token::UnicodeProperty
   Script_V2_4_0 = ::T.let(nil, ::T.untyped)
   Script_V2_5_0 = ::T.let(nil, ::T.untyped)
   Script_V2_6_0 = ::T.let(nil, ::T.untyped)
+  Script_V2_6_2 = ::T.let(nil, ::T.untyped)
   Type = ::T.let(nil, ::T.untyped)
   UnicodeBlock = ::T.let(nil, ::T.untyped)
   UnicodeBlock_V1_9_0 = ::T.let(nil, ::T.untyped)
@@ -23192,6 +23233,7 @@ module Regexp::Syntax::Token::UnicodeProperty
   UnicodeBlock_V2_4_0 = ::T.let(nil, ::T.untyped)
   UnicodeBlock_V2_5_0 = ::T.let(nil, ::T.untyped)
   UnicodeBlock_V2_6_0 = ::T.let(nil, ::T.untyped)
+  UnicodeBlock_V2_6_2 = ::T.let(nil, ::T.untyped)
   V1_9_0 = ::T.let(nil, ::T.untyped)
   V1_9_3 = ::T.let(nil, ::T.untyped)
   V2_0_0 = ::T.let(nil, ::T.untyped)
@@ -23200,6 +23242,8 @@ module Regexp::Syntax::Token::UnicodeProperty
   V2_4_0 = ::T.let(nil, ::T.untyped)
   V2_5_0 = ::T.let(nil, ::T.untyped)
   V2_6_0 = ::T.let(nil, ::T.untyped)
+  V2_6_2 = ::T.let(nil, ::T.untyped)
+  V2_6_3 = ::T.let(nil, ::T.untyped)
 end
 
 module Regexp::Syntax::Token::UnicodeProperty::Category

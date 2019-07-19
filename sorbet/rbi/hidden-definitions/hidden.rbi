@@ -8119,8 +8119,6 @@ module Enumerable
 
   def grep_v(_); end
 
-  def lazy(); end
-
   def slice_after(*_); end
 
   def slice_before(*_); end
@@ -9008,6 +9006,8 @@ class File
   def self.lutime(*_); end
 
   def self.mkfifo(*_); end
+
+  def self.probe_stat_in(dir); end
 
 end
 
@@ -14946,25 +14946,8 @@ class JSON::CircularDatastructure
   extend ::T::Sig
 end
 
-module JSON::Ext
-end
-
-module JSON::Ext::Generator
-end
-
-module JSON::Ext::Generator::GeneratorMethods
-end
-
-module JSON::Ext::Generator::GeneratorMethods::Array
-  def to_json(*_); end
-end
-
 module JSON::Ext::Generator::GeneratorMethods::Array
   extend ::T::Sig
-end
-
-module JSON::Ext::Generator::GeneratorMethods::FalseClass
-  def to_json(*_); end
 end
 
 module JSON::Ext::Generator::GeneratorMethods::FalseClass
@@ -14972,15 +14955,7 @@ module JSON::Ext::Generator::GeneratorMethods::FalseClass
 end
 
 module JSON::Ext::Generator::GeneratorMethods::Float
-  def to_json(*_); end
-end
-
-module JSON::Ext::Generator::GeneratorMethods::Float
   extend ::T::Sig
-end
-
-module JSON::Ext::Generator::GeneratorMethods::Hash
-  def to_json(*_); end
 end
 
 module JSON::Ext::Generator::GeneratorMethods::Hash
@@ -14988,15 +14963,7 @@ module JSON::Ext::Generator::GeneratorMethods::Hash
 end
 
 module JSON::Ext::Generator::GeneratorMethods::Integer
-  def to_json(*_); end
-end
-
-module JSON::Ext::Generator::GeneratorMethods::Integer
   extend ::T::Sig
-end
-
-module JSON::Ext::Generator::GeneratorMethods::NilClass
-  def to_json(*_); end
 end
 
 module JSON::Ext::Generator::GeneratorMethods::NilClass
@@ -15004,27 +14971,11 @@ module JSON::Ext::Generator::GeneratorMethods::NilClass
 end
 
 module JSON::Ext::Generator::GeneratorMethods::Object
-  def to_json(*_); end
-end
-
-module JSON::Ext::Generator::GeneratorMethods::Object
   extend ::T::Sig
 end
 
 module JSON::Ext::Generator::GeneratorMethods::String
-  def to_json(*_); end
-
-  def to_json_raw(*_); end
-
-  def to_json_raw_object(); end
-end
-
-module JSON::Ext::Generator::GeneratorMethods::String
   extend ::T::Sig
-end
-
-module JSON::Ext::Generator::GeneratorMethods::TrueClass
-  def to_json(*_); end
 end
 
 module JSON::Ext::Generator::GeneratorMethods::TrueClass
@@ -15036,62 +14987,11 @@ module JSON::Ext::Generator::GeneratorMethods
 end
 
 class JSON::Ext::Generator::State
-  def [](_); end
-
-  def []=(_, _1); end
-
-  def allow_nan?(); end
-
-  def array_nl(); end
-
-  def array_nl=(array_nl); end
-
-  def ascii_only?(); end
-
-  def buffer_initial_length(); end
-
-  def buffer_initial_length=(buffer_initial_length); end
-
-  def check_circular?(); end
-
-  def configure(_); end
-
-  def depth(); end
-
-  def depth=(depth); end
-
-  def generate(_); end
-
-  def indent(); end
-
-  def indent=(indent); end
-
-  def initialize(*_); end
-
-  def max_nesting(); end
-
-  def max_nesting=(max_nesting); end
-
-  def merge(_); end
-
-  def object_nl(); end
-
-  def object_nl=(object_nl); end
-
-  def space(); end
-
-  def space=(space); end
-
-  def space_before(); end
-
-  def space_before=(space_before); end
-
-  def to_h(); end
-
-  def to_hash(); end
+  include ::ActiveSupport::ToJsonWithActiveSupportEncoder
 end
 
 class JSON::Ext::Generator::State
+  extend ::T::Sig
   def self.from_state(_); end
 end
 
@@ -15100,14 +15000,12 @@ module JSON::Ext::Generator
 end
 
 class JSON::Ext::Parser
+  include ::ActiveSupport::ToJsonWithActiveSupportEncoder
   def initialize(*_); end
-
-  def parse(); end
-
-  def source(); end
 end
 
 class JSON::Ext::Parser
+  extend ::T::Sig
 end
 
 module JSON::Ext
@@ -17306,13 +17204,17 @@ class Net::HTTPIMUsed
   extend ::T::Sig
 end
 
-Net::HTTPInformation::EXCEPTION_TYPE = Net::HTTPError
-
 class Net::HTTPInformation
   extend ::T::Sig
 end
 
-Net::HTTPInformationCode = Net::HTTPInformation
+class Net::HTTPInformation
+end
+
+Net::HTTPInformationCode::EXCEPTION_TYPE = Net::HTTPError
+
+class Net::HTTPInformation
+end
 
 class Net::HTTPInsufficientStorage
   extend ::T::Sig
@@ -17452,7 +17354,13 @@ class Net::HTTPRedirection
   extend ::T::Sig
 end
 
-Net::HTTPRedirectionCode = Net::HTTPRedirection
+class Net::HTTPRedirection
+end
+
+Net::HTTPRedirectionCode::EXCEPTION_TYPE = Net::HTTPRetriableError
+
+class Net::HTTPRedirection
+end
 
 class Net::HTTPRequest
   extend ::T::Sig
@@ -17493,13 +17401,7 @@ class Net::HTTPResponse
   extend ::T::Sig
 end
 
-class Net::HTTPRedirection
-end
-
-Net::HTTPRetriableCode::EXCEPTION_TYPE = Net::HTTPRetriableError
-
-class Net::HTTPRedirection
-end
+Net::HTTPRetriableCode = Net::HTTPRedirection
 
 class Net::HTTPRetriableError
   extend ::T::Sig
@@ -19795,8 +19697,6 @@ class Proc
   def ===(*_); end
 
   def >>(_); end
-
-  def [](*_); end
 
   def clone(); end
 
@@ -27702,8 +27602,6 @@ class String
   def encode!(*_); end
 
   def grapheme_clusters(); end
-
-  def match?(*_); end
 
   def parse_csv(**options); end
 

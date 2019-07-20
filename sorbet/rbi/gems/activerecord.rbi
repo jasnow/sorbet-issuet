@@ -3541,48 +3541,6 @@ class ActiveRecord::AssociationRelation < ActiveRecord::Relation
   def new(*args, &block); end
   def proxy_association; end
 end
-class ActiveRecord::Schema < ActiveRecord::Migration::Current
-  def define(info, &block); end
-  def migrations_paths; end
-  def self.define(info = nil, &block); end
-end
-module Anonymous_ActiveRecord_AttributeMethods_GeneratedAttributeMethods_16
-end
-class ActiveRecord::SchemaMigration < ActiveRecord::Base
-  def self._validators; end
-  def self.all_versions; end
-  def self.attribute_type_decorations; end
-  def self.create_table; end
-  def self.defined_enums; end
-  def self.drop_table; end
-  def self.normalize_migration_number(number); end
-  def self.normalized_versions; end
-  def self.primary_key; end
-  def self.table_exists?; end
-  def self.table_name; end
-  def version; end
-  include ActiveRecord::SchemaMigration::GeneratedAssociationMethods
-  include Anonymous_ActiveRecord_AttributeMethods_GeneratedAttributeMethods_16
-end
-module ActiveRecord::SchemaMigration::GeneratedAssociationMethods
-end
-class ActiveRecord::SchemaMigration::ActiveRecord_Relation < ActiveRecord::Relation
-  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
-  include ActiveRecord::Delegation::ClassSpecificRelation
-  include ActiveRecord::SchemaMigration::GeneratedRelationMethods
-end
-module ActiveRecord::SchemaMigration::GeneratedRelationMethods
-end
-class ActiveRecord::SchemaMigration::ActiveRecord_Associations_CollectionProxy < ActiveRecord::Associations::CollectionProxy
-  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
-  include ActiveRecord::Delegation::ClassSpecificRelation
-  include ActiveRecord::SchemaMigration::GeneratedRelationMethods
-end
-class ActiveRecord::SchemaMigration::ActiveRecord_AssociationRelation < ActiveRecord::AssociationRelation
-  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
-  include ActiveRecord::Delegation::ClassSpecificRelation
-  include ActiveRecord::SchemaMigration::GeneratedRelationMethods
-end
 class ActiveRecord::ConnectionAdapters::TransactionState
   def add_child(state); end
   def commit!; end
@@ -3644,6 +3602,43 @@ class ActiveRecord::ConnectionAdapters::TransactionManager
   def open_transactions; end
   def rollback_transaction(transaction = nil); end
   def within_new_transaction(options = nil); end
+end
+module Anonymous_ActiveRecord_AttributeMethods_GeneratedAttributeMethods_16
+end
+class ActiveRecord::SchemaMigration < ActiveRecord::Base
+  def self._validators; end
+  def self.all_versions; end
+  def self.attribute_type_decorations; end
+  def self.create_table; end
+  def self.defined_enums; end
+  def self.drop_table; end
+  def self.normalize_migration_number(number); end
+  def self.normalized_versions; end
+  def self.primary_key; end
+  def self.table_exists?; end
+  def self.table_name; end
+  def version; end
+  include ActiveRecord::SchemaMigration::GeneratedAssociationMethods
+  include Anonymous_ActiveRecord_AttributeMethods_GeneratedAttributeMethods_16
+end
+module ActiveRecord::SchemaMigration::GeneratedAssociationMethods
+end
+class ActiveRecord::SchemaMigration::ActiveRecord_Relation < ActiveRecord::Relation
+  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+  include ActiveRecord::Delegation::ClassSpecificRelation
+  include ActiveRecord::SchemaMigration::GeneratedRelationMethods
+end
+module ActiveRecord::SchemaMigration::GeneratedRelationMethods
+end
+class ActiveRecord::SchemaMigration::ActiveRecord_Associations_CollectionProxy < ActiveRecord::Associations::CollectionProxy
+  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+  include ActiveRecord::Delegation::ClassSpecificRelation
+  include ActiveRecord::SchemaMigration::GeneratedRelationMethods
+end
+class ActiveRecord::SchemaMigration::ActiveRecord_AssociationRelation < ActiveRecord::AssociationRelation
+  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+  include ActiveRecord::Delegation::ClassSpecificRelation
+  include ActiveRecord::SchemaMigration::GeneratedRelationMethods
 end
 class ActiveRecord::Result
   def [](idx); end
@@ -3784,77 +3779,6 @@ class ActiveRecord::ConnectionAdapters::Column
 end
 class ActiveRecord::ConnectionAdapters::NullColumn < ActiveRecord::ConnectionAdapters::Column
   def initialize(name); end
-end
-module Anonymous_ActiveRecord_AttributeMethods_GeneratedAttributeMethods_18
-end
-class ActiveRecord::InternalMetadata < ActiveRecord::Base
-  def self.[](key); end
-  def self.[]=(key, value); end
-  def self._validators; end
-  def self.attribute_type_decorations; end
-  def self.create_table; end
-  def self.defined_enums; end
-  def self.primary_key; end
-  def self.table_exists?; end
-  def self.table_name; end
-  include ActiveRecord::InternalMetadata::GeneratedAssociationMethods
-  include Anonymous_ActiveRecord_AttributeMethods_GeneratedAttributeMethods_18
-end
-module ActiveRecord::InternalMetadata::GeneratedAssociationMethods
-end
-class ActiveRecord::InternalMetadata::ActiveRecord_Relation < ActiveRecord::Relation
-  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
-  include ActiveRecord::Delegation::ClassSpecificRelation
-  include ActiveRecord::InternalMetadata::GeneratedRelationMethods
-end
-module ActiveRecord::InternalMetadata::GeneratedRelationMethods
-end
-class ActiveRecord::InternalMetadata::ActiveRecord_Associations_CollectionProxy < ActiveRecord::Associations::CollectionProxy
-  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
-  include ActiveRecord::Delegation::ClassSpecificRelation
-  include ActiveRecord::InternalMetadata::GeneratedRelationMethods
-end
-class ActiveRecord::InternalMetadata::ActiveRecord_AssociationRelation < ActiveRecord::AssociationRelation
-  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
-  include ActiveRecord::Delegation::ClassSpecificRelation
-  include ActiveRecord::InternalMetadata::GeneratedRelationMethods
-end
-class ActiveRecord::StatementCache
-  def bind_map; end
-  def execute(params, connection, &block); end
-  def initialize(query_builder, bind_map, klass); end
-  def klass; end
-  def query_builder; end
-  def self.create(connection, block = nil); end
-  def self.partial_query(values); end
-  def self.query(sql); end
-  def self.unsupported_value?(value); end
-end
-class ActiveRecord::StatementCache::Substitute
-end
-class ActiveRecord::StatementCache::Query
-  def initialize(sql); end
-  def sql_for(binds, connection); end
-end
-class ActiveRecord::StatementCache::PartialQuery < ActiveRecord::StatementCache::Query
-  def initialize(values); end
-  def sql_for(binds, connection); end
-end
-class ActiveRecord::StatementCache::Params
-  def bind; end
-end
-class ActiveRecord::StatementCache::BindMap
-  def bind(values); end
-  def initialize(bound_attributes); end
-end
-module ActiveRecord::LegacyYamlAdapter
-  def self.convert(klass, coder); end
-end
-module ActiveRecord::LegacyYamlAdapter::Rails420
-  def self.convert(klass, coder); end
-end
-module ActiveRecord::LegacyYamlAdapter::Rails41
-  def self.convert(klass, coder); end
 end
 class ActiveRecord::FixtureSet
   def [](x); end

@@ -7553,13 +7553,6 @@
 # wrong constant name open_uri
 # wrong constant name redirectable?
 # wrong constant name scan_open_optional_arguments
-# wrong constant name def_head_option
-# wrong constant name def_option
-# wrong constant name def_tail_option
-# wrong constant name set_banner
-# wrong constant name set_program_name
-# wrong constant name set_summary_indent
-# wrong constant name set_summary_width
 # uninitialized constant Opus
 # uninitialized constant Opus
 # undefined method `basename$1' for class `Pathname'

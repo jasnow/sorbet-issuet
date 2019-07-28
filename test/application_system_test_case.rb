@@ -1,4 +1,4 @@
-# typed: false
+# typed: strong
 #HID: require "test_helper"
 #HID:
 #HID: class ApplicationSystemTestCase < ActionDispatch::SystemTestCase

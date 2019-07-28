@@ -1316,7 +1316,7 @@ module Sass::Script::Functions
   def selector_parse(selector); end
   def selector_replace(selector, original, replacement); end
   def selector_unify(selector1, selector2); end
-  def self.callable?(*arg0); end
+  def self.callable?(arg0); end
   def self.declare(method_name, args, options = nil); end
   def self.include(*args); end
   def self.random_number_generator; end

@@ -1658,7 +1658,7 @@ class ActiveSupport::HashWithIndifferentAccess < Hash
   def merge!(other_hash); end
   def merge(hash, &block); end
   def nested_under_indifferent_access; end
-  def regular_update(*arg0); end
+  def regular_update(arg0); end
   def regular_writer(arg0, arg1); end
   def reject(*args, &block); end
   def replace(other_hash); end
@@ -2028,7 +2028,7 @@ class ActiveSupport::EventedFileUpdateChecker::PathHelper
 end
 class File < IO
   def self.empty?(arg0); end
-  def self.probe_stat_in(dir); end
+  def self.join(*arg0); end
 end
 module ActiveSupport::MarshalWithAutoloading
   def load(source, proc = nil); end

@@ -3409,10 +3409,6 @@ module ActiveSupport::XmlMini_REXML
   CONTENT_KEY = ::T.let(nil, ::T.untyped)
 end
 
-class Addrinfo
-  def connect_internal(local_addrinfo, timeout=T.unsafe(nil)); end
-end
-
 class ApplicationRecord
   include ::ApplicationRecord::GeneratedAssociationMethods
 end
@@ -3468,11 +3464,7 @@ class Array
 
   def collect!(); end
 
-  def difference(*_); end
-
   def dig(*_); end
-
-  def filter!(); end
 
   def flatten!(*_); end
 
@@ -3488,7 +3480,6 @@ class Array
 
   def to_h(); end
 
-  def union(*_); end
 end
 
 class Array
@@ -3572,7 +3563,7 @@ class BigDecimal
 end
 
 class BigDecimal
-  def self.new(*args, **kwargs); end
+  def self.ver(); end
 end
 
 Bindex = Skiptrace
@@ -3590,8 +3581,6 @@ class Binding
   def local_variable_set(_, _1); end
 
   def receiver(); end
-
-  def source_location(); end
 end
 
 module Bootsnap
@@ -4742,6 +4731,119 @@ class Delegator
   def self.public_api(); end
 end
 
+class DidYouMean::ClassNameChecker
+  include ::ActiveSupport::ToJsonWithActiveSupportEncoder
+  def class_name(); end
+
+  def class_names(); end
+
+  def corrections(); end
+
+  def initialize(exception); end
+
+  def scopes(); end
+end
+
+module DidYouMean::Correctable
+  def corrections(); end
+
+  def original_message(); end
+
+  def spell_checker(); end
+
+  def to_s(); end
+end
+
+class DidYouMean::DeprecatedIgnoredCallers
+  def +(*_); end
+
+  def <<(*_); end
+end
+
+class DidYouMean::DeprecatedIgnoredCallers
+end
+
+module DidYouMean::Jaro
+  def self.distance(str1, str2); end
+end
+
+module DidYouMean::JaroWinkler
+  def self.distance(str1, str2); end
+end
+
+class DidYouMean::KeyErrorChecker
+  def corrections(); end
+
+  def initialize(key_error); end
+end
+
+class DidYouMean::KeyErrorChecker
+end
+
+module DidYouMean::Levenshtein
+  def self.distance(str1, str2); end
+
+  def self.min3(a, b, c); end
+end
+
+class DidYouMean::MethodNameChecker
+  include ::ActiveSupport::ToJsonWithActiveSupportEncoder
+  def corrections(); end
+
+  def initialize(exception); end
+
+  def method_name(); end
+
+  def method_names(); end
+
+  def receiver(); end
+end
+
+class DidYouMean::NullChecker
+  include ::ActiveSupport::ToJsonWithActiveSupportEncoder
+  def corrections(); end
+
+  def initialize(*_); end
+end
+
+class DidYouMean::PlainFormatter
+  def message_for(corrections); end
+end
+
+class DidYouMean::PlainFormatter
+end
+
+class DidYouMean::SpellChecker
+  include ::ActiveSupport::ToJsonWithActiveSupportEncoder
+  def correct(input); end
+
+  def initialize(dictionary:); end
+end
+
+class DidYouMean::VariableNameChecker
+  include ::ActiveSupport::ToJsonWithActiveSupportEncoder
+  def corrections(); end
+
+  def cvar_names(); end
+
+  def initialize(exception); end
+
+  def ivar_names(); end
+
+  def lvar_names(); end
+
+  def method_names(); end
+
+  def name(); end
+  RB_PREDEFINED_OBJECTS = ::T.let(nil, ::T.untyped)
+end
+
+module DidYouMean
+  def self.formatter(); end
+
+  def self.formatter=(formatter); end
+end
+
 class Digest::Class
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
 end
@@ -4755,10 +4857,6 @@ end
 
 class Dir
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
-  def children(); end
-
-  def each_child(); end
-
 end
 
 class Dir
@@ -4884,15 +4982,11 @@ end
 
 module Enumerable
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
-  def chain(*_); end
-
   def chunk(); end
 
   def chunk_while(); end
 
   def each_entry(*_); end
-
-  def filter(); end
 
   def grep_v(_); end
 
@@ -4913,33 +5007,8 @@ end
 
 class Enumerator
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
-  def +(_); end
-
   def each_with_index(); end
 
-end
-
-class Enumerator::ArithmeticSequence
-  def begin(); end
-
-  def each(&blk); end
-
-  def end(); end
-
-  def exclude_end?(); end
-
-  def last(*_); end
-
-  def step(); end
-end
-
-class Enumerator::ArithmeticSequence
-end
-
-class Enumerator::Chain
-end
-
-class Enumerator::Chain
 end
 
 class Enumerator::Generator
@@ -4970,27 +5039,6 @@ end
 class Errno::EAUTH
 end
 
-class Errno::EBADARCH
-  Errno = ::T.let(nil, ::T.untyped)
-end
-
-class Errno::EBADARCH
-end
-
-class Errno::EBADEXEC
-  Errno = ::T.let(nil, ::T.untyped)
-end
-
-class Errno::EBADEXEC
-end
-
-class Errno::EBADMACHO
-  Errno = ::T.let(nil, ::T.untyped)
-end
-
-class Errno::EBADMACHO
-end
-
 class Errno::EBADRPC
   Errno = ::T.let(nil, ::T.untyped)
 end
@@ -5001,13 +5049,6 @@ end
 Errno::ECAPMODE = Errno::NOERROR
 
 Errno::EDEADLOCK = Errno::NOERROR
-
-class Errno::EDEVERR
-  Errno = ::T.let(nil, ::T.untyped)
-end
-
-class Errno::EDEVERR
-end
 
 Errno::EDOOFUS = Errno::NOERROR
 
@@ -5020,13 +5061,6 @@ end
 
 Errno::EIPSEC = Errno::NOERROR
 
-class Errno::ELAST
-  Errno = ::T.let(nil, ::T.untyped)
-end
-
-class Errno::ELAST
-end
-
 class Errno::ENEEDAUTH
   Errno = ::T.let(nil, ::T.untyped)
 end
@@ -5039,13 +5073,6 @@ class Errno::ENOATTR
 end
 
 class Errno::ENOATTR
-end
-
-class Errno::ENOPOLICY
-  Errno = ::T.let(nil, ::T.untyped)
-end
-
-class Errno::ENOPOLICY
 end
 
 Errno::ENOTCAPABLE = Errno::NOERROR
@@ -5085,27 +5112,11 @@ end
 class Errno::EPROGUNAVAIL
 end
 
-class Errno::EPWROFF
-  Errno = ::T.let(nil, ::T.untyped)
-end
-
-class Errno::EPWROFF
-end
-
-Errno::EQFULL = Errno::ELAST
-
 class Errno::ERPCMISMATCH
   Errno = ::T.let(nil, ::T.untyped)
 end
 
 class Errno::ERPCMISMATCH
-end
-
-class Errno::ESHLIBVERS
-  Errno = ::T.let(nil, ::T.untyped)
-end
-
-class Errno::ESHLIBVERS
 end
 
 module Erubi
@@ -5339,6 +5350,8 @@ class File
 
   def self.mkfifo(*_); end
 
+  def self.probe_stat_in(dir); end
+
 end
 
 module FileTest
@@ -5447,8 +5460,6 @@ class FileUtils::Entry_
 
   def initialize(a, b=T.unsafe(nil), deref=T.unsafe(nil)); end
 
-  def link(dest); end
-
   def lstat(); end
 
   def lstat!(); end
@@ -5544,8 +5555,6 @@ module FileUtils
 
   def self.cp(src, dest, preserve: T.unsafe(nil), noop: T.unsafe(nil), verbose: T.unsafe(nil)); end
 
-  def self.cp_lr(src, dest, noop: T.unsafe(nil), verbose: T.unsafe(nil), dereference_root: T.unsafe(nil), remove_destination: T.unsafe(nil)); end
-
   def self.getwd(); end
 
   def self.have_option?(mid, opt); end
@@ -5555,8 +5564,6 @@ module FileUtils
   def self.install(src, dest, mode: T.unsafe(nil), owner: T.unsafe(nil), group: T.unsafe(nil), preserve: T.unsafe(nil), noop: T.unsafe(nil), verbose: T.unsafe(nil)); end
 
   def self.link(src, dest, force: T.unsafe(nil), noop: T.unsafe(nil), verbose: T.unsafe(nil)); end
-
-  def self.link_entry(src, dest, dereference_root=T.unsafe(nil), remove_destination=T.unsafe(nil)); end
 
   def self.ln(src, dest, force: T.unsafe(nil), noop: T.unsafe(nil), verbose: T.unsafe(nil)); end
 
@@ -5628,7 +5635,6 @@ module Forwardable
   def delegate(hash); end
 
   def instance_delegate(hash); end
-  VERSION = ::T.let(nil, ::T.untyped)
 end
 
 module Forwardable
@@ -5659,8 +5665,6 @@ module GC
   def self.stress=(stress); end
 
   def self.verify_internal_consistency(); end
-
-  def self.verify_transient_heap_internal_consistency(); end
 end
 
 module Gem
@@ -9647,13 +9651,11 @@ class Hash
 
   def fetch_values(*_); end
 
-  def filter!(); end
-
   def flatten(*_); end
 
   def index(_); end
 
-  def merge!(*_); end
+  def merge!(_); end
 
   def replace(_); end
 
@@ -9671,7 +9673,7 @@ class Hash
 
   def transform_values!(); end
 
-  def update(*_); end
+  def update(_); end
 end
 
 class Hash
@@ -10299,7 +10301,6 @@ module IRB
   IRBRC_EXT = ::T.let(nil, ::T.untyped)
   MagicFile = ::T.let(nil, ::T.untyped)
   STDIN_FILE_NAME = ::T.let(nil, ::T.untyped)
-  VERSION = ::T.let(nil, ::T.untyped)
 end
 
 class IRB::Abort
@@ -10341,7 +10342,7 @@ class IRB::Context
 
   def eval_history=(*opts, &b); end
 
-  def evaluate(line, line_no, exception: T.unsafe(nil)); end
+  def evaluate(line, line_no); end
 
   def exit(ret=T.unsafe(nil)); end
 
@@ -10583,8 +10584,6 @@ class IRB::Irb
   def context(); end
 
   def eval_input(); end
-
-  def handle_exception(exc); end
 
   def initialize(workspace=T.unsafe(nil), input_method=T.unsafe(nil), output_method=T.unsafe(nil)); end
 
@@ -10882,10 +10881,6 @@ class IRB::WorkSpace
 
   def initialize(*main); end
 
-  def local_variable_get(name); end
-
-  def local_variable_set(name, value); end
-
   def main(); end
 end
 
@@ -10996,8 +10991,6 @@ module Kernel
 
   def respond_to?(*_); end
 
-  def then(); end
-
   def yield_self(); end
 end
 
@@ -11014,6 +11007,7 @@ module Kernel
 end
 
 class KeyError
+  include ::DidYouMean::Correctable
   def key(); end
 
   def receiver(); end
@@ -12335,11 +12329,7 @@ end
 
 class Method
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
-  def <<(_); end
-
   def ===(*_); end
-
-  def >>(_); end
 
   def [](*_); end
 
@@ -12398,21 +12388,7 @@ class MiniMime::Info
   BINARY_ENCODINGS = ::T.let(nil, ::T.untyped)
 end
 
-module Minitest
-end
-
-MiniTest::Assertions = Minitest::Assertions
-
-MiniTest::Guard = Minitest::Guard
-
-MiniTest::Reportable = Minitest::Reportable
-
-MiniTest::Runnable = Minitest::Runnable
-
-MiniTest::Test = Minitest::Test
-
-module Minitest
-end
+MiniTest = Minitest
 
 module Minitest
   ENCS = ::T.let(nil, ::T.untyped)
@@ -12507,11 +12483,8 @@ end
 
 Mutex = Thread::Mutex
 
-module Mutex_m
-  VERSION = ::T.let(nil, ::T.untyped)
-end
-
 class NameError
+  include ::DidYouMean::Correctable
   def name(); end
 
   def receiver(); end
@@ -12527,9 +12500,6 @@ Net::APOPSession = Net::APOP
 
 class Net::BufferedIO
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
-  def write_timeout(); end
-
-  def write_timeout=(write_timeout); end
 end
 
 class Net::HTTP
@@ -12544,15 +12514,9 @@ class Net::HTTP
   def min_version(); end
 
   def min_version=(min_version); end
-
-  def write_timeout(); end
-
-  def write_timeout=(sec); end
   ENVIRONMENT_VARIABLE_IS_MULTIUSER_SAFE = ::T.let(nil, ::T.untyped)
 end
 
-Net::HTTP::ProxyMod = Net::HTTP::ProxyDelta
-
 class Net::HTTPAlreadyReported
   HAS_BODY = ::T.let(nil, ::T.untyped)
 end
@@ -12560,27 +12524,15 @@ end
 class Net::HTTPAlreadyReported
 end
 
-Net::HTTPClientError::EXCEPTION_TYPE = Net::HTTPServerException
-
-Net::HTTPClientErrorCode = Net::HTTPClientError
-
-Net::HTTPClientException = Net::HTTPServerException
-
-class Net::HTTPEarlyHints
-  HAS_BODY = ::T.let(nil, ::T.untyped)
+class Net::HTTPClientError
 end
 
-class Net::HTTPEarlyHints
+Net::HTTPClientErrorCode::EXCEPTION_TYPE = Net::HTTPServerException
+
+class Net::HTTPClientError
 end
 
 Net::HTTPFatalErrorCode = Net::HTTPClientError
-
-class Net::HTTPGatewayTimeout
-  HAS_BODY = ::T.let(nil, ::T.untyped)
-end
-
-class Net::HTTPGatewayTimeout
-end
 
 class Net::HTTPGenericRequest
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
@@ -12590,9 +12542,13 @@ class Net::HTTPGenericRequest::Chunker
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
 end
 
-Net::HTTPInformation::EXCEPTION_TYPE = Net::HTTPError
+class Net::HTTPInformation
+end
 
-Net::HTTPInformationCode = Net::HTTPInformation
+Net::HTTPInformationCode::EXCEPTION_TYPE = Net::HTTPError
+
+class Net::HTTPInformation
+end
 
 class Net::HTTPLoopDetected
   HAS_BODY = ::T.let(nil, ::T.untyped)
@@ -12619,13 +12575,6 @@ end
 class Net::HTTPNotExtended
 end
 
-class Net::HTTPPayloadTooLarge
-  HAS_BODY = ::T.let(nil, ::T.untyped)
-end
-
-class Net::HTTPPayloadTooLarge
-end
-
 class Net::HTTPProcessing
   HAS_BODY = ::T.let(nil, ::T.untyped)
 end
@@ -12633,25 +12582,15 @@ end
 class Net::HTTPProcessing
 end
 
-class Net::HTTPRangeNotSatisfiable
-  HAS_BODY = ::T.let(nil, ::T.untyped)
+class Net::HTTPRedirection
 end
 
-class Net::HTTPRangeNotSatisfiable
+Net::HTTPRedirectionCode::EXCEPTION_TYPE = Net::HTTPRetriableError
+
+class Net::HTTPRedirection
 end
 
-Net::HTTPRedirection::EXCEPTION_TYPE = Net::HTTPRetriableError
-
-Net::HTTPRedirectionCode = Net::HTTPRedirection
-
-class Net::HTTPRequestTimeout
-  HAS_BODY = ::T.let(nil, ::T.untyped)
-end
-
-class Net::HTTPRequestTimeout
-end
-
-Net::HTTPRequestURITooLarge = Net::HTTPURITooLong
+Net::HTTPRequestURITooLarge = Net::HTTPRequestURITooLong
 
 Net::HTTPResponceReceiver = Net::HTTPResponse
 
@@ -12665,21 +12604,30 @@ end
 
 Net::HTTPRetriableCode = Net::HTTPRedirection
 
-Net::HTTPServerError::EXCEPTION_TYPE = Net::HTTPFatalError
-
-Net::HTTPServerErrorCode = Net::HTTPServerError
-
-Net::HTTPSession = Net::HTTP
-
-Net::HTTPSuccess::EXCEPTION_TYPE = Net::HTTPError
-
-Net::HTTPSuccessCode = Net::HTTPSuccess
-
-class Net::HTTPURITooLong
-  HAS_BODY = ::T.let(nil, ::T.untyped)
+class Net::HTTPServerError
 end
 
-class Net::HTTPURITooLong
+Net::HTTPServerErrorCode::EXCEPTION_TYPE = Net::HTTPFatalError
+
+class Net::HTTPServerError
+end
+
+class Net::HTTP
+end
+
+Net::HTTPSession::ProxyDelta = Net::HTTP::ProxyDelta
+
+Net::HTTPSession::ProxyMod = Net::HTTP::ProxyDelta
+
+class Net::HTTP
+end
+
+class Net::HTTPSuccess
+end
+
+Net::HTTPSuccessCode::EXCEPTION_TYPE = Net::HTTPError
+
+class Net::HTTPSuccess
 end
 
 Net::HTTPUnknownResponse::EXCEPTION_TYPE = Net::HTTPError
@@ -12934,12 +12882,6 @@ class Net::ReadAdapter
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
 end
 
-class Net::ReadTimeout
-  def initialize(io=T.unsafe(nil)); end
-
-  def io(); end
-end
-
 class Net::SMTP::Response
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
 end
@@ -12950,25 +12892,15 @@ class Net::WriteAdapter
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
 end
 
-class Net::WriteTimeout
-  def initialize(io=T.unsafe(nil)); end
-
-  def io(); end
-end
-
-class Net::WriteTimeout
-end
-
 class NilClass
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
   include ::JSON::Ext::Generator::GeneratorMethods::NilClass
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
-  def to_d(); end
-
   def to_i(); end
 end
 
 class NoMethodError
+  include ::DidYouMean::Correctable
   def args(); end
 
   def private_call?(); end
@@ -13585,11 +13517,7 @@ end
 
 class Proc
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
-  def <<(_); end
-
   def ===(*_); end
-
-  def >>(_); end
 
   def clone(); end
 
@@ -13808,6 +13736,18 @@ end
 class Psych::Exception
 end
 
+class Psych::FALLBACK
+  def to_ruby(); end
+
+  def to_ruby=(_); end
+end
+
+class Psych::FALLBACK
+  def self.[](*_); end
+
+  def self.members(); end
+end
+
 class Psych::Handler
   def alias(anchor); end
 
@@ -13992,11 +13932,7 @@ end
 
 class Psych::Nodes::Node
   include ::Enumerable
-  def alias?(); end
-
   def children(); end
-
-  def document?(); end
 
   def each(&block); end
 
@@ -14008,12 +13944,6 @@ class Psych::Nodes::Node
 
   def end_line=(end_line); end
 
-  def mapping?(); end
-
-  def scalar?(); end
-
-  def sequence?(); end
-
   def start_column(); end
 
   def start_column=(start_column); end
@@ -14021,8 +13951,6 @@ class Psych::Nodes::Node
   def start_line(); end
 
   def start_line=(start_line); end
-
-  def stream?(); end
 
   def tag(); end
 
@@ -14411,27 +14339,27 @@ module Psych
 
   def self.libyaml_version(); end
 
-  def self.load(yaml, legacy_filename=T.unsafe(nil), filename: T.unsafe(nil), fallback: T.unsafe(nil), symbolize_names: T.unsafe(nil)); end
+  def self.load(yaml, filename=T.unsafe(nil), fallback: T.unsafe(nil), symbolize_names: T.unsafe(nil)); end
 
   def self.load_file(path); end
 
-  def self.load_stream(yaml, legacy_filename=T.unsafe(nil), filename: T.unsafe(nil), fallback: T.unsafe(nil)); end
+  def self.load_stream(yaml, filename=T.unsafe(nil)); end
 
   def self.load_tags(); end
 
   def self.load_tags=(load_tags); end
 
-  def self.parse(yaml, legacy_filename=T.unsafe(nil), filename: T.unsafe(nil), fallback: T.unsafe(nil)); end
+  def self.parse(yaml, filename=T.unsafe(nil), fallback: T.unsafe(nil)); end
 
-  def self.parse_file(filename, fallback: T.unsafe(nil)); end
+  def self.parse_file(filename); end
 
-  def self.parse_stream(yaml, legacy_filename=T.unsafe(nil), filename: T.unsafe(nil), &block); end
+  def self.parse_stream(yaml, filename=T.unsafe(nil), &block); end
 
   def self.parser(); end
 
   def self.remove_type(type_tag); end
 
-  def self.safe_load(yaml, legacy_permitted_classes=T.unsafe(nil), legacy_permitted_symbols=T.unsafe(nil), legacy_aliases=T.unsafe(nil), legacy_filename=T.unsafe(nil), permitted_classes: T.unsafe(nil), permitted_symbols: T.unsafe(nil), aliases: T.unsafe(nil), filename: T.unsafe(nil), fallback: T.unsafe(nil), symbolize_names: T.unsafe(nil)); end
+  def self.safe_load(yaml, whitelist_classes=T.unsafe(nil), whitelist_symbols=T.unsafe(nil), aliases=T.unsafe(nil), filename=T.unsafe(nil), symbolize_names: T.unsafe(nil)); end
 
   def self.to_json(object); end
 end
@@ -15827,9 +15755,6 @@ module Random::Formatter
 end
 
 class Random
-  extend ::Random::Formatter
-  def self.bytes(_); end
-
   def self.urandom(_); end
 end
 
@@ -15839,11 +15764,6 @@ class Range
   include ::ActiveSupport::CompareWithRange
   include ::ActiveSupport::RangeWithFormat
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
-  def %(_); end
-
-  def entries(); end
-
-  def to_a(); end
 end
 
 class Rational
@@ -15852,8 +15772,6 @@ end
 
 module RbConfig
   def self.expand(val, config=T.unsafe(nil)); end
-
-  def self.fire_update!(key, val, mkconf=T.unsafe(nil), conf=T.unsafe(nil)); end
 
   def self.ruby(); end
 end
@@ -15893,8 +15811,6 @@ module Readline
   def self.completion_proc(); end
 
   def self.completion_proc=(completion_proc); end
-
-  def self.completion_quote_character(); end
 
   def self.delete_text(*_); end
 
@@ -17350,36 +17266,6 @@ class RubyVM
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
 end
 
-module RubyVM::AbstractSyntaxTree
-end
-
-class RubyVM::AbstractSyntaxTree::Node
-  def children(); end
-
-  def first_column(); end
-
-  def first_lineno(); end
-
-  def last_column(); end
-
-  def last_lineno(); end
-
-  def pretty_print_children(q, names=T.unsafe(nil)); end
-
-  def type(); end
-end
-
-class RubyVM::AbstractSyntaxTree::Node
-end
-
-module RubyVM::AbstractSyntaxTree
-  def self.of(_); end
-
-  def self.parse(_); end
-
-  def self.parse_file(_); end
-end
-
 class RubyVM::InstructionSequence
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
   def absolute_path(); end
@@ -17408,7 +17294,6 @@ class RubyVM::InstructionSequence
 end
 
 class RubyVM::InstructionSequence
-  extend ::Bootsnap::CompileCache::ISeq::InstructionSequenceMixin
   def self.compile(*_); end
 
   def self.compile_file(*_); end
@@ -17428,20 +17313,7 @@ class RubyVM::InstructionSequence
   def self.of(_); end
 end
 
-module RubyVM::MJIT
-end
-
-module RubyVM::MJIT
-  def self.enabled?(); end
-
-  def self.pause(*_); end
-
-  def self.resume(); end
-end
-
 class RubyVM
-  def self.resolve_feature_path(_); end
-
   def self.stat(*_); end
 end
 
@@ -17782,8 +17654,6 @@ class Set
   def divide(&func); end
 
   def eql?(o); end
-
-  def filter!(&block); end
 
   def flatten_merge(set, seen=T.unsafe(nil)); end
 
@@ -18907,8 +18777,6 @@ class Struct
 
   def each_pair(); end
 
-  def filter(*_); end
-
   def length(); end
 
   def members(); end
@@ -18940,10 +18808,6 @@ class Symbol
 
   def next(); end
 
-end
-
-class Symbol
-  def self.from_msgpack_ext(data); end
 end
 
 class SystemCallError
@@ -19648,15 +19512,7 @@ end
 
 class TracePoint
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
-  def __enable(_, _1); end
-
-  def eval_script(); end
-
   def event(); end
-
-  def instruction_sequence(); end
-
-  def parameters(); end
 end
 
 class TrueClass
@@ -19701,21 +19557,6 @@ end
 
 class URI::FTP
   def self.new2(user, password, host, port, path, typecode=T.unsafe(nil), arg_check=T.unsafe(nil)); end
-end
-
-class URI::File
-  def check_password(user); end
-
-  def check_user(user); end
-
-  def check_userinfo(user); end
-
-  def set_userinfo(v); end
-  COMPONENT = ::T.let(nil, ::T.untyped)
-  DEFAULT_PORT = ::T.let(nil, ::T.untyped)
-end
-
-class URI::File
 end
 
 class URI::GID

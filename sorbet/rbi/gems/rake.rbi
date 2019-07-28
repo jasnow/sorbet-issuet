@@ -33,7 +33,6 @@ module Rake::FileUtilsExt
   def chown_R(*args, &block); end
   def copy(*args, &block); end
   def cp(*args, &block); end
-  def cp_lr(*args, &block); end
   def cp_r(*args, &block); end
   def install(*args, &block); end
   def link(*args, &block); end
@@ -98,7 +97,6 @@ class Rake::FileList
   def at(*args, &block); end
   def bsearch(*args, &block); end
   def bsearch_index(*args, &block); end
-  def chain(*args, &block); end
   def chunk(*args, &block); end
   def chunk_while(*args, &block); end
   def clear(*args, &block); end
@@ -116,7 +114,6 @@ class Rake::FileList
   def delete_at(*args, &block); end
   def delete_if(*args, &block); end
   def detect(*args, &block); end
-  def difference(*args, &block); end
   def dig(*args, &block); end
   def drop(*args, &block); end
   def drop_while(*args, &block); end
@@ -139,8 +136,6 @@ class Rake::FileList
   def fetch(*args, &block); end
   def fifth(*args, &block); end
   def fill(*args, &block); end
-  def filter!(*args, &block); end
-  def filter(*args, &block); end
   def find(*args, &block); end
   def find_all(*args, &block); end
   def find_index(*args, &block); end
@@ -246,7 +241,6 @@ class Rake::FileList
   def to_set(*args, &block); end
   def to_xml(*args, &block); end
   def transpose(*args, &block); end
-  def union(*args, &block); end
   def uniq!(*args, &block); end
   def uniq(*args, &block); end
   def unshift(*args, &block); end

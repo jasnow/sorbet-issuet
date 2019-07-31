@@ -2403,6 +2403,14 @@
 # wrong constant name extend_object
 # wrong constant name message
 # wrong constant name <static-init>
+# wrong constant name <Class:NativeType>
+# wrong constant name <Class:NullPointerError>
+# wrong constant name <static-init>
+# wrong constant name <static-init>
+# uninitialized constant FFI::Struct::InlineArray::Elem
+# wrong constant name <static-init>
+# wrong constant name <static-init>
+# wrong constant name <static-init>
 # wrong constant name resume
 # wrong constant name transfer
 # wrong constant name current
@@ -4429,7 +4437,7 @@
 # wrong constant name transform_values
 # wrong constant name transform_values!
 # wrong constant name update
-# wrong constant name from_trusted_xml
+# wrong constant name from_xml
 # wrong constant name <Class:Gettext>
 # wrong constant name <Class:Locale>
 # wrong constant name <Class:Middleware>
@@ -9220,174 +9228,6 @@
 # uninitialized constant SQLite3::Database::SYNCHRONOUS_MODES
 # uninitialized constant SQLite3::Database::TEMP_STORE_MODES
 # uninitialized constant SQLite3::Database::WAL_CHECKPOINTS
-# uninitialized constant Sass::SCSS::Parser::ANY
-# uninitialized constant Sass::SCSS::Parser::CDC
-# uninitialized constant Sass::SCSS::Parser::CDO
-# uninitialized constant Sass::SCSS::Parser::COMMENT
-# uninitialized constant Sass::SCSS::Parser::DASHMATCH
-# uninitialized constant Sass::SCSS::Parser::DOMAIN
-# uninitialized constant Sass::SCSS::Parser::ESCAPE
-# uninitialized constant Sass::SCSS::Parser::FUNCTION
-# uninitialized constant Sass::SCSS::Parser::GREATER
-# uninitialized constant Sass::SCSS::Parser::H
-# uninitialized constant Sass::SCSS::Parser::HASH
-# uninitialized constant Sass::SCSS::Parser::HEXCOLOR
-# uninitialized constant Sass::SCSS::Parser::IDENT
-# uninitialized constant Sass::SCSS::Parser::IDENT_HYPHEN_INTERP
-# uninitialized constant Sass::SCSS::Parser::IDENT_START
-# uninitialized constant Sass::SCSS::Parser::IMPORTANT
-# uninitialized constant Sass::SCSS::Parser::INCLUDES
-# uninitialized constant Sass::SCSS::Parser::INTERP_START
-# uninitialized constant Sass::SCSS::Parser::NAME
-# uninitialized constant Sass::SCSS::Parser::NL
-# uninitialized constant Sass::SCSS::Parser::NMCHAR
-# uninitialized constant Sass::SCSS::Parser::NMSTART
-# uninitialized constant Sass::SCSS::Parser::NONASCII
-# uninitialized constant Sass::SCSS::Parser::NOT
-# uninitialized constant Sass::SCSS::Parser::NUMBER
-# uninitialized constant Sass::SCSS::Parser::OPTIONAL
-# uninitialized constant Sass::SCSS::Parser::PERCENTAGE
-# uninitialized constant Sass::SCSS::Parser::PLUS
-# uninitialized constant Sass::SCSS::Parser::PREFIXMATCH
-# uninitialized constant Sass::SCSS::Parser::RANGE
-# uninitialized constant Sass::SCSS::Parser::S
-# uninitialized constant Sass::SCSS::Parser::SINGLE_LINE_COMMENT
-# uninitialized constant Sass::SCSS::Parser::STATIC_COMPONENT
-# uninitialized constant Sass::SCSS::Parser::STATIC_SELECTOR
-# uninitialized constant Sass::SCSS::Parser::STATIC_VALUE
-# uninitialized constant Sass::SCSS::Parser::STRING
-# uninitialized constant Sass::SCSS::Parser::STRING1
-# uninitialized constant Sass::SCSS::Parser::STRING1_NOINTERP
-# uninitialized constant Sass::SCSS::Parser::STRING2
-# uninitialized constant Sass::SCSS::Parser::STRING2_NOINTERP
-# uninitialized constant Sass::SCSS::Parser::STRING_NOINTERP
-# uninitialized constant Sass::SCSS::Parser::SUBSTRINGMATCH
-# uninitialized constant Sass::SCSS::Parser::SUFFIXMATCH
-# uninitialized constant Sass::SCSS::Parser::TILDE
-# uninitialized constant Sass::SCSS::Parser::UNICODE
-# uninitialized constant Sass::SCSS::Parser::UNICODERANGE
-# uninitialized constant Sass::SCSS::Parser::UNIT
-# uninitialized constant Sass::SCSS::Parser::UNITLESS_NUMBER
-# uninitialized constant Sass::SCSS::Parser::URI
-# uninitialized constant Sass::SCSS::Parser::URL
-# uninitialized constant Sass::SCSS::Parser::URLCHAR
-# uninitialized constant Sass::SCSS::Parser::URL_PREFIX
-# uninitialized constant Sass::SCSS::Parser::VARIABLE
-# uninitialized constant Sass::SCSS::Parser::W
-# uninitialized constant Sass::SCSS::StaticParser::ANY
-# uninitialized constant Sass::SCSS::StaticParser::CDC
-# uninitialized constant Sass::SCSS::StaticParser::CDO
-# uninitialized constant Sass::SCSS::StaticParser::COMMENT
-# uninitialized constant Sass::SCSS::StaticParser::DASHMATCH
-# uninitialized constant Sass::SCSS::StaticParser::DIRECTIVES
-# uninitialized constant Sass::SCSS::StaticParser::DOMAIN
-# uninitialized constant Sass::SCSS::StaticParser::ESCAPE
-# uninitialized constant Sass::SCSS::StaticParser::EXPR_NAMES
-# uninitialized constant Sass::SCSS::StaticParser::FUNCTION
-# uninitialized constant Sass::SCSS::StaticParser::GREATER
-# uninitialized constant Sass::SCSS::StaticParser::H
-# uninitialized constant Sass::SCSS::StaticParser::HASH
-# uninitialized constant Sass::SCSS::StaticParser::HEXCOLOR
-# uninitialized constant Sass::SCSS::StaticParser::IDENT
-# uninitialized constant Sass::SCSS::StaticParser::IDENT_HYPHEN_INTERP
-# uninitialized constant Sass::SCSS::StaticParser::IDENT_START
-# uninitialized constant Sass::SCSS::StaticParser::IMPORTANT
-# uninitialized constant Sass::SCSS::StaticParser::INCLUDES
-# uninitialized constant Sass::SCSS::StaticParser::INTERP_START
-# uninitialized constant Sass::SCSS::StaticParser::NAME
-# uninitialized constant Sass::SCSS::StaticParser::NEWLINE
-# uninitialized constant Sass::SCSS::StaticParser::NL
-# uninitialized constant Sass::SCSS::StaticParser::NMCHAR
-# uninitialized constant Sass::SCSS::StaticParser::NMSTART
-# uninitialized constant Sass::SCSS::StaticParser::NONASCII
-# uninitialized constant Sass::SCSS::StaticParser::NOT
-# uninitialized constant Sass::SCSS::StaticParser::NUMBER
-# uninitialized constant Sass::SCSS::StaticParser::OPTIONAL
-# uninitialized constant Sass::SCSS::StaticParser::PERCENTAGE
-# uninitialized constant Sass::SCSS::StaticParser::PLUS
-# uninitialized constant Sass::SCSS::StaticParser::PREFIXED_DIRECTIVES
-# uninitialized constant Sass::SCSS::StaticParser::PREFIXMATCH
-# uninitialized constant Sass::SCSS::StaticParser::RANGE
-# uninitialized constant Sass::SCSS::StaticParser::S
-# uninitialized constant Sass::SCSS::StaticParser::SINGLE_LINE_COMMENT
-# uninitialized constant Sass::SCSS::StaticParser::STATIC_COMPONENT
-# uninitialized constant Sass::SCSS::StaticParser::STATIC_SELECTOR
-# uninitialized constant Sass::SCSS::StaticParser::STATIC_VALUE
-# uninitialized constant Sass::SCSS::StaticParser::STRING
-# uninitialized constant Sass::SCSS::StaticParser::STRING1
-# uninitialized constant Sass::SCSS::StaticParser::STRING1_NOINTERP
-# uninitialized constant Sass::SCSS::StaticParser::STRING2
-# uninitialized constant Sass::SCSS::StaticParser::STRING2_NOINTERP
-# uninitialized constant Sass::SCSS::StaticParser::STRING_NOINTERP
-# uninitialized constant Sass::SCSS::StaticParser::SUBSTRINGMATCH
-# uninitialized constant Sass::SCSS::StaticParser::SUFFIXMATCH
-# uninitialized constant Sass::SCSS::StaticParser::TILDE
-# uninitialized constant Sass::SCSS::StaticParser::TOK_NAMES
-# uninitialized constant Sass::SCSS::StaticParser::UNICODE
-# uninitialized constant Sass::SCSS::StaticParser::UNICODERANGE
-# uninitialized constant Sass::SCSS::StaticParser::UNIT
-# uninitialized constant Sass::SCSS::StaticParser::UNITLESS_NUMBER
-# uninitialized constant Sass::SCSS::StaticParser::URI
-# uninitialized constant Sass::SCSS::StaticParser::URL
-# uninitialized constant Sass::SCSS::StaticParser::URLCHAR
-# uninitialized constant Sass::SCSS::StaticParser::URL_PREFIX
-# uninitialized constant Sass::SCSS::StaticParser::VARIABLE
-# uninitialized constant Sass::SCSS::StaticParser::W
-# uninitialized constant Sass::Script::Functions::EvaluationContext::VALID_UNIT
-# uninitialized constant Sass::Script::Lexer::ANY
-# uninitialized constant Sass::Script::Lexer::CDC
-# uninitialized constant Sass::Script::Lexer::CDO
-# uninitialized constant Sass::Script::Lexer::COMMENT
-# uninitialized constant Sass::Script::Lexer::DASHMATCH
-# uninitialized constant Sass::Script::Lexer::DOMAIN
-# uninitialized constant Sass::Script::Lexer::ESCAPE
-# uninitialized constant Sass::Script::Lexer::FUNCTION
-# uninitialized constant Sass::Script::Lexer::GREATER
-# uninitialized constant Sass::Script::Lexer::H
-# uninitialized constant Sass::Script::Lexer::HASH
-# uninitialized constant Sass::Script::Lexer::HEXCOLOR
-# uninitialized constant Sass::Script::Lexer::IDENT
-# uninitialized constant Sass::Script::Lexer::IDENT_HYPHEN_INTERP
-# uninitialized constant Sass::Script::Lexer::IDENT_START
-# uninitialized constant Sass::Script::Lexer::IMPORTANT
-# uninitialized constant Sass::Script::Lexer::INCLUDES
-# uninitialized constant Sass::Script::Lexer::INTERP_START
-# uninitialized constant Sass::Script::Lexer::NAME
-# uninitialized constant Sass::Script::Lexer::NL
-# uninitialized constant Sass::Script::Lexer::NMCHAR
-# uninitialized constant Sass::Script::Lexer::NMSTART
-# uninitialized constant Sass::Script::Lexer::NONASCII
-# uninitialized constant Sass::Script::Lexer::NOT
-# uninitialized constant Sass::Script::Lexer::NUMBER
-# uninitialized constant Sass::Script::Lexer::OPTIONAL
-# uninitialized constant Sass::Script::Lexer::PERCENTAGE
-# uninitialized constant Sass::Script::Lexer::PLUS
-# uninitialized constant Sass::Script::Lexer::PREFIXMATCH
-# uninitialized constant Sass::Script::Lexer::RANGE
-# uninitialized constant Sass::Script::Lexer::S
-# uninitialized constant Sass::Script::Lexer::SINGLE_LINE_COMMENT
-# uninitialized constant Sass::Script::Lexer::STATIC_COMPONENT
-# uninitialized constant Sass::Script::Lexer::STATIC_SELECTOR
-# uninitialized constant Sass::Script::Lexer::STATIC_VALUE
-# uninitialized constant Sass::Script::Lexer::STRING
-# uninitialized constant Sass::Script::Lexer::STRING1
-# uninitialized constant Sass::Script::Lexer::STRING1_NOINTERP
-# uninitialized constant Sass::Script::Lexer::STRING2
-# uninitialized constant Sass::Script::Lexer::STRING2_NOINTERP
-# uninitialized constant Sass::Script::Lexer::STRING_NOINTERP
-# uninitialized constant Sass::Script::Lexer::SUBSTRINGMATCH
-# uninitialized constant Sass::Script::Lexer::SUFFIXMATCH
-# uninitialized constant Sass::Script::Lexer::TILDE
-# uninitialized constant Sass::Script::Lexer::UNICODE
-# uninitialized constant Sass::Script::Lexer::UNICODERANGE
-# uninitialized constant Sass::Script::Lexer::UNIT
-# uninitialized constant Sass::Script::Lexer::UNITLESS_NUMBER
-# uninitialized constant Sass::Script::Lexer::URI
-# uninitialized constant Sass::Script::Lexer::URL
-# uninitialized constant Sass::Script::Lexer::URLCHAR
-# uninitialized constant Sass::Script::Lexer::URL_PREFIX
-# uninitialized constant Sass::Script::Lexer::VARIABLE
-# uninitialized constant Sass::Script::Lexer::W
 # wrong constant name bytes
 # wrong constant name ==
 # wrong constant name ===
@@ -9578,6 +9418,7 @@
 # wrong constant name my_require
 # wrong constant name patch_kernel
 # wrong constant name rails?
+# wrong constant name rb_file_paths
 # wrong constant name require_all_files
 # wrong constant name require_everything
 # wrong constant name alias
@@ -9685,9 +9526,6 @@
 # uninitialized constant Sprockets::Rails::Helper::URI_REGEXP
 # uninitialized constant Sprockets::Railtie::ABSTRACT_RAILTIES
 # uninitialized constant Sprockets::Resolve::SEPARATOR_PATTERN
-# wrong constant name initialize
-# wrong constant name path_to
-# wrong constant name <static-init>
 # wrong constant name <static-init>
 # wrong constant name call
 # wrong constant name <static-init>

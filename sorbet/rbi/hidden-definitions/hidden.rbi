@@ -5309,6 +5309,210 @@ end
 class ExitCalledError
 end
 
+module FFI
+  CURRENT_PROCESS = ::T.let(nil, ::T.untyped)
+  SizeTypes = ::T.let(nil, ::T.untyped)
+  TYPE_BOOL = ::T.let(nil, ::T.untyped)
+  TYPE_BUFFER_IN = ::T.let(nil, ::T.untyped)
+  TYPE_BUFFER_INOUT = ::T.let(nil, ::T.untyped)
+  TYPE_BUFFER_OUT = ::T.let(nil, ::T.untyped)
+  TYPE_FLOAT32 = ::T.let(nil, ::T.untyped)
+  TYPE_FLOAT64 = ::T.let(nil, ::T.untyped)
+  TYPE_INT16 = ::T.let(nil, ::T.untyped)
+  TYPE_INT32 = ::T.let(nil, ::T.untyped)
+  TYPE_INT64 = ::T.let(nil, ::T.untyped)
+  TYPE_INT8 = ::T.let(nil, ::T.untyped)
+  TYPE_LONG = ::T.let(nil, ::T.untyped)
+  TYPE_LONGDOUBLE = ::T.let(nil, ::T.untyped)
+  TYPE_POINTER = ::T.let(nil, ::T.untyped)
+  TYPE_STRING = ::T.let(nil, ::T.untyped)
+  TYPE_UINT16 = ::T.let(nil, ::T.untyped)
+  TYPE_UINT32 = ::T.let(nil, ::T.untyped)
+  TYPE_UINT64 = ::T.let(nil, ::T.untyped)
+  TYPE_UINT8 = ::T.let(nil, ::T.untyped)
+  TYPE_ULONG = ::T.let(nil, ::T.untyped)
+  TYPE_VARARGS = ::T.let(nil, ::T.untyped)
+  TYPE_VOID = ::T.let(nil, ::T.untyped)
+  TypeDefs = ::T.let(nil, ::T.untyped)
+  USE_THIS_PROCESS_AS_LIBRARY = ::T.let(nil, ::T.untyped)
+end
+
+FFI::CallbackInfo = FFI::FunctionType
+
+class FFI::DynamicLibrary
+  RTLD_ALL_MASK = ::T.let(nil, ::T.untyped)
+  RTLD_BINDING_MASK = ::T.let(nil, ::T.untyped)
+  RTLD_DEEPBIND = ::T.let(nil, ::T.untyped)
+  RTLD_FIRST = ::T.let(nil, ::T.untyped)
+  RTLD_GLOBAL = ::T.let(nil, ::T.untyped)
+  RTLD_LAZY = ::T.let(nil, ::T.untyped)
+  RTLD_LOCAL = ::T.let(nil, ::T.untyped)
+  RTLD_LOCATION_MASK = ::T.let(nil, ::T.untyped)
+  RTLD_MEMBER = ::T.let(nil, ::T.untyped)
+  RTLD_NODELETE = ::T.let(nil, ::T.untyped)
+  RTLD_NOLOAD = ::T.let(nil, ::T.untyped)
+  RTLD_NOW = ::T.let(nil, ::T.untyped)
+end
+
+FFI::FunctionInfo = FFI::FunctionType
+
+module FFI::Library
+  CURRENT_PROCESS = ::T.let(nil, ::T.untyped)
+  FlagsMap = ::T.let(nil, ::T.untyped)
+  LIBC = ::T.let(nil, ::T.untyped)
+end
+
+FFI::NativeLibrary = FFI::DynamicLibrary
+
+module FFI::NativeType
+  BOOL = ::T.let(nil, ::T.untyped)
+  BUFFER_IN = ::T.let(nil, ::T.untyped)
+  BUFFER_INOUT = ::T.let(nil, ::T.untyped)
+  BUFFER_OUT = ::T.let(nil, ::T.untyped)
+  FLOAT32 = ::T.let(nil, ::T.untyped)
+  FLOAT64 = ::T.let(nil, ::T.untyped)
+  INT16 = ::T.let(nil, ::T.untyped)
+  INT32 = ::T.let(nil, ::T.untyped)
+  INT64 = ::T.let(nil, ::T.untyped)
+  INT8 = ::T.let(nil, ::T.untyped)
+  LONG = ::T.let(nil, ::T.untyped)
+  LONGDOUBLE = ::T.let(nil, ::T.untyped)
+  POINTER = ::T.let(nil, ::T.untyped)
+  STRING = ::T.let(nil, ::T.untyped)
+  UINT16 = ::T.let(nil, ::T.untyped)
+  UINT32 = ::T.let(nil, ::T.untyped)
+  UINT64 = ::T.let(nil, ::T.untyped)
+  UINT8 = ::T.let(nil, ::T.untyped)
+  ULONG = ::T.let(nil, ::T.untyped)
+  VARARGS = ::T.let(nil, ::T.untyped)
+  VOID = ::T.let(nil, ::T.untyped)
+end
+
+module FFI::NativeType
+end
+
+class FFI::NullPointerError
+end
+
+class FFI::NullPointerError
+end
+
+module FFI::Platform
+  ADDRESS_ALIGN = ::T.let(nil, ::T.untyped)
+  ADDRESS_SIZE = ::T.let(nil, ::T.untyped)
+  ARCH = ::T.let(nil, ::T.untyped)
+  BIG_ENDIAN = ::T.let(nil, ::T.untyped)
+  BYTE_ORDER = ::T.let(nil, ::T.untyped)
+  CONF_DIR = ::T.let(nil, ::T.untyped)
+  CPU = ::T.let(nil, ::T.untyped)
+  DOUBLE_ALIGN = ::T.let(nil, ::T.untyped)
+  DOUBLE_SIZE = ::T.let(nil, ::T.untyped)
+  FLOAT_ALIGN = ::T.let(nil, ::T.untyped)
+  FLOAT_SIZE = ::T.let(nil, ::T.untyped)
+  INT16_ALIGN = ::T.let(nil, ::T.untyped)
+  INT16_SIZE = ::T.let(nil, ::T.untyped)
+  INT32_ALIGN = ::T.let(nil, ::T.untyped)
+  INT32_SIZE = ::T.let(nil, ::T.untyped)
+  INT64_ALIGN = ::T.let(nil, ::T.untyped)
+  INT64_SIZE = ::T.let(nil, ::T.untyped)
+  INT8_ALIGN = ::T.let(nil, ::T.untyped)
+  INT8_SIZE = ::T.let(nil, ::T.untyped)
+  IS_BSD = ::T.let(nil, ::T.untyped)
+  IS_FREEBSD = ::T.let(nil, ::T.untyped)
+  IS_GNU = ::T.let(nil, ::T.untyped)
+  IS_LINUX = ::T.let(nil, ::T.untyped)
+  IS_MAC = ::T.let(nil, ::T.untyped)
+  IS_NETBSD = ::T.let(nil, ::T.untyped)
+  IS_OPENBSD = ::T.let(nil, ::T.untyped)
+  IS_SOLARIS = ::T.let(nil, ::T.untyped)
+  IS_WINDOWS = ::T.let(nil, ::T.untyped)
+  LIBC = ::T.let(nil, ::T.untyped)
+  LIBPREFIX = ::T.let(nil, ::T.untyped)
+  LIBSUFFIX = ::T.let(nil, ::T.untyped)
+  LITTLE_ENDIAN = ::T.let(nil, ::T.untyped)
+  LONG_ALIGN = ::T.let(nil, ::T.untyped)
+  LONG_SIZE = ::T.let(nil, ::T.untyped)
+  NAME = ::T.let(nil, ::T.untyped)
+  OS = ::T.let(nil, ::T.untyped)
+  OSVERSION = ::T.let(nil, ::T.untyped)
+end
+
+class FFI::Pointer
+  NULL = ::T.let(nil, ::T.untyped)
+  SIZE = ::T.let(nil, ::T.untyped)
+end
+
+class FFI::Struct::InlineArray
+  include ::Enumerable
+end
+
+class FFI::StructLayout::Number
+end
+
+class FFI::StructLayout::Number
+end
+
+class FFI::StructLayout::Pointer
+end
+
+class FFI::StructLayout::Pointer
+end
+
+class FFI::StructLayout::String
+end
+
+class FFI::StructLayout::String
+end
+
+class FFI::StructLayoutBuilder
+  NUMBER_TYPES = ::T.let(nil, ::T.untyped)
+end
+
+class FFI::Type
+  BOOL = ::T.let(nil, ::T.untyped)
+  BUFFER_IN = ::T.let(nil, ::T.untyped)
+  BUFFER_INOUT = ::T.let(nil, ::T.untyped)
+  BUFFER_OUT = ::T.let(nil, ::T.untyped)
+  CHAR = ::T.let(nil, ::T.untyped)
+  DOUBLE = ::T.let(nil, ::T.untyped)
+  FLOAT = ::T.let(nil, ::T.untyped)
+  FLOAT32 = ::T.let(nil, ::T.untyped)
+  FLOAT64 = ::T.let(nil, ::T.untyped)
+  INT = ::T.let(nil, ::T.untyped)
+  INT16 = ::T.let(nil, ::T.untyped)
+  INT32 = ::T.let(nil, ::T.untyped)
+  INT64 = ::T.let(nil, ::T.untyped)
+  INT8 = ::T.let(nil, ::T.untyped)
+  LONG = ::T.let(nil, ::T.untyped)
+  LONGDOUBLE = ::T.let(nil, ::T.untyped)
+  LONG_LONG = ::T.let(nil, ::T.untyped)
+  POINTER = ::T.let(nil, ::T.untyped)
+  SCHAR = ::T.let(nil, ::T.untyped)
+  SHORT = ::T.let(nil, ::T.untyped)
+  SINT = ::T.let(nil, ::T.untyped)
+  SLONG = ::T.let(nil, ::T.untyped)
+  SLONG_LONG = ::T.let(nil, ::T.untyped)
+  SSHORT = ::T.let(nil, ::T.untyped)
+  STRING = ::T.let(nil, ::T.untyped)
+  UCHAR = ::T.let(nil, ::T.untyped)
+  UINT = ::T.let(nil, ::T.untyped)
+  UINT16 = ::T.let(nil, ::T.untyped)
+  UINT32 = ::T.let(nil, ::T.untyped)
+  UINT64 = ::T.let(nil, ::T.untyped)
+  UINT8 = ::T.let(nil, ::T.untyped)
+  ULONG = ::T.let(nil, ::T.untyped)
+  ULONG_LONG = ::T.let(nil, ::T.untyped)
+  USHORT = ::T.let(nil, ::T.untyped)
+  VARARGS = ::T.let(nil, ::T.untyped)
+  VOID = ::T.let(nil, ::T.untyped)
+end
+
+FFI::Type::Array = FFI::ArrayType
+
+FFI::Type::Function = FFI::FunctionType
+
+FFI::Type::Struct = FFI::StructByValue
+
 class FSEvent
   VERSION = ::T.let(nil, ::T.untyped)
 end
@@ -9621,7 +9825,7 @@ class Hash
 end
 
 class Hash
-  def self.from_trusted_xml(xml); end
+  def self.from_xml(xml, disallowed_types=T.unsafe(nil)); end
 end
 
 HashWithIndifferentAccess = ActiveSupport::HashWithIndifferentAccess
@@ -12445,15 +12649,15 @@ end
 class Net::HTTPAlreadyReported
 end
 
-class Net::HTTPClientError
-end
-
-Net::HTTPClientErrorCode::EXCEPTION_TYPE = Net::HTTPServerException
+Net::HTTPClientErrorCode = Net::HTTPClientError
 
 class Net::HTTPClientError
 end
 
-Net::HTTPFatalErrorCode = Net::HTTPClientError
+Net::HTTPFatalErrorCode::EXCEPTION_TYPE = Net::HTTPServerException
+
+class Net::HTTPClientError
+end
 
 class Net::HTTPGenericRequest
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
@@ -17345,210 +17549,50 @@ module SQLite3::VersionProxy
   VERSION = ::T.let(nil, ::T.untyped)
 end
 
-module Sass
-  ROOT_DIR = ::T.let(nil, ::T.untyped)
+module SassC
   VERSION = ::T.let(nil, ::T.untyped)
 end
 
-class Sass::Engine
-  COMMENT_CHAR = ::T.let(nil, ::T.untyped)
-  CONTENT_RE = ::T.let(nil, ::T.untyped)
-  CSS_COMMENT_CHAR = ::T.let(nil, ::T.untyped)
-  DEFAULT_OPTIONS = ::T.let(nil, ::T.untyped)
-  DIRECTIVES = ::T.let(nil, ::T.untyped)
-  DIRECTIVE_CHAR = ::T.let(nil, ::T.untyped)
-  ESCAPE_CHAR = ::T.let(nil, ::T.untyped)
-  FUNCTION_RE = ::T.let(nil, ::T.untyped)
-  MIXIN_DEFINITION_CHAR = ::T.let(nil, ::T.untyped)
-  MIXIN_DEF_RE = ::T.let(nil, ::T.untyped)
-  MIXIN_INCLUDE_CHAR = ::T.let(nil, ::T.untyped)
-  MIXIN_INCLUDE_RE = ::T.let(nil, ::T.untyped)
-  PROPERTY_CHAR = ::T.let(nil, ::T.untyped)
-  PROPERTY_OLD = ::T.let(nil, ::T.untyped)
-  SASS_COMMENT_CHAR = ::T.let(nil, ::T.untyped)
-  SASS_LOUD_COMMENT_CHAR = ::T.let(nil, ::T.untyped)
+class SassC::Engine
+  OUTPUT_STYLES = ::T.let(nil, ::T.untyped)
 end
 
-module Sass::Features
-  KNOWN_FEATURES = ::T.let(nil, ::T.untyped)
+module SassC::Native
+  SassInputStyle = ::T.let(nil, ::T.untyped)
+  SassOutputStyle = ::T.let(nil, ::T.untyped)
+  SassSeparator = ::T.let(nil, ::T.untyped)
+  SassTag = ::T.let(nil, ::T.untyped)
 end
 
-class Sass::Importers::Filesystem
-  REDUNDANT_DIRECTORY = ::T.let(nil, ::T.untyped)
-end
-
-module Sass::Rails
+module SassC::Rails
   VERSION = ::T.let(nil, ::T.untyped)
 end
 
-module Sass::Rails::SassImporter::Globbing
+class SassC::Rails::Importer
+  EXTENSIONS = ::T.let(nil, ::T.untyped)
   GLOB = ::T.let(nil, ::T.untyped)
+  PREFIXS = ::T.let(nil, ::T.untyped)
 end
 
-class Sass::SCSS::Parser
-  DIRECTIVES = ::T.let(nil, ::T.untyped)
-  EXPR_NAMES = ::T.let(nil, ::T.untyped)
-  NEWLINE = ::T.let(nil, ::T.untyped)
-  PREFIXED_DIRECTIVES = ::T.let(nil, ::T.untyped)
-  TOK_NAMES = ::T.let(nil, ::T.untyped)
-end
-
-module Sass::SCSS::RX
-  ANY = ::T.let(nil, ::T.untyped)
-  CDC = ::T.let(nil, ::T.untyped)
-  CDO = ::T.let(nil, ::T.untyped)
-  COMMENT = ::T.let(nil, ::T.untyped)
-  DASHMATCH = ::T.let(nil, ::T.untyped)
-  DOMAIN = ::T.let(nil, ::T.untyped)
-  ESCAPE = ::T.let(nil, ::T.untyped)
-  FUNCTION = ::T.let(nil, ::T.untyped)
-  GREATER = ::T.let(nil, ::T.untyped)
-  H = ::T.let(nil, ::T.untyped)
-  HASH = ::T.let(nil, ::T.untyped)
-  HEXCOLOR = ::T.let(nil, ::T.untyped)
-  IDENT = ::T.let(nil, ::T.untyped)
-  IDENT_HYPHEN_INTERP = ::T.let(nil, ::T.untyped)
-  IDENT_START = ::T.let(nil, ::T.untyped)
-  IMPORTANT = ::T.let(nil, ::T.untyped)
-  INCLUDES = ::T.let(nil, ::T.untyped)
-  INTERP_START = ::T.let(nil, ::T.untyped)
-  NAME = ::T.let(nil, ::T.untyped)
-  NL = ::T.let(nil, ::T.untyped)
-  NMCHAR = ::T.let(nil, ::T.untyped)
-  NMSTART = ::T.let(nil, ::T.untyped)
-  NONASCII = ::T.let(nil, ::T.untyped)
-  NOT = ::T.let(nil, ::T.untyped)
-  NUMBER = ::T.let(nil, ::T.untyped)
-  OPTIONAL = ::T.let(nil, ::T.untyped)
-  PERCENTAGE = ::T.let(nil, ::T.untyped)
-  PLUS = ::T.let(nil, ::T.untyped)
-  PREFIXMATCH = ::T.let(nil, ::T.untyped)
-  RANGE = ::T.let(nil, ::T.untyped)
-  S = ::T.let(nil, ::T.untyped)
-  SINGLE_LINE_COMMENT = ::T.let(nil, ::T.untyped)
-  STATIC_COMPONENT = ::T.let(nil, ::T.untyped)
-  STATIC_SELECTOR = ::T.let(nil, ::T.untyped)
-  STATIC_VALUE = ::T.let(nil, ::T.untyped)
-  STRING = ::T.let(nil, ::T.untyped)
-  STRING1 = ::T.let(nil, ::T.untyped)
-  STRING1_NOINTERP = ::T.let(nil, ::T.untyped)
-  STRING2 = ::T.let(nil, ::T.untyped)
-  STRING2_NOINTERP = ::T.let(nil, ::T.untyped)
-  STRING_NOINTERP = ::T.let(nil, ::T.untyped)
-  SUBSTRINGMATCH = ::T.let(nil, ::T.untyped)
-  SUFFIXMATCH = ::T.let(nil, ::T.untyped)
-  TILDE = ::T.let(nil, ::T.untyped)
-  UNICODE = ::T.let(nil, ::T.untyped)
-  UNICODERANGE = ::T.let(nil, ::T.untyped)
-  UNIT = ::T.let(nil, ::T.untyped)
-  UNITLESS_NUMBER = ::T.let(nil, ::T.untyped)
-  URI = ::T.let(nil, ::T.untyped)
-  URL = ::T.let(nil, ::T.untyped)
-  URLCHAR = ::T.let(nil, ::T.untyped)
-  URL_PREFIX = ::T.let(nil, ::T.untyped)
-  VARIABLE = ::T.let(nil, ::T.untyped)
-  W = ::T.let(nil, ::T.untyped)
-end
-
-class Sass::SCSS::StaticParser
-  PREFIXED_SELECTOR_PSEUDO_CLASSES = ::T.let(nil, ::T.untyped)
-  SELECTOR_PSEUDO_CLASSES = ::T.let(nil, ::T.untyped)
-  SELECTOR_PSEUDO_ELEMENTS = ::T.let(nil, ::T.untyped)
-end
-
-module Sass::Script
-  CONST_RENAMES = ::T.let(nil, ::T.untyped)
-  MATCH = ::T.let(nil, ::T.untyped)
-  VALIDATE = ::T.let(nil, ::T.untyped)
-end
-
-class Sass::Script::Functions::EvaluationContext
-  TYPE_NAMES = ::T.let(nil, ::T.untyped)
-end
-
-class Sass::Script::Lexer
-  IDENT_OP_NAMES = ::T.let(nil, ::T.untyped)
-  OPERATORS = ::T.let(nil, ::T.untyped)
-  OPERATORS_REVERSE = ::T.let(nil, ::T.untyped)
-  OP_NAMES = ::T.let(nil, ::T.untyped)
-  PARSEABLE_NUMBER = ::T.let(nil, ::T.untyped)
-  REGULAR_EXPRESSIONS = ::T.let(nil, ::T.untyped)
-  STRING_REGULAR_EXPRESSIONS = ::T.let(nil, ::T.untyped)
-  TOKEN_NAMES = ::T.let(nil, ::T.untyped)
-end
-
-class Sass::Script::Parser
-  ASSOCIATIVE = ::T.let(nil, ::T.untyped)
-  EXPR_NAMES = ::T.let(nil, ::T.untyped)
-  PRECEDENCE = ::T.let(nil, ::T.untyped)
-end
-
-class Sass::Script::Value::Bool
+class SassC::Script::Value::Bool
   FALSE = ::T.let(nil, ::T.untyped)
   TRUE = ::T.let(nil, ::T.untyped)
 end
 
-class Sass::Script::Value::Color
-  ALTERNATE_COLOR_NAMES = ::T.let(nil, ::T.untyped)
-  COLOR_NAMES = ::T.let(nil, ::T.untyped)
-  COLOR_NAMES_REVERSE = ::T.let(nil, ::T.untyped)
-end
-
-module Sass::Script::Value::Helpers
-  VALID_UNIT = ::T.let(nil, ::T.untyped)
-end
-
-class Sass::Script::Value::Null
-  NULL = ::T.let(nil, ::T.untyped)
-end
-
-class Sass::Script::Value::Number
+class SassC::Script::Value::Number
   CONVERSION_TABLE = ::T.let(nil, ::T.untyped)
   MUTUALLY_CONVERTIBLE = ::T.let(nil, ::T.untyped)
   NO_UNITS = ::T.let(nil, ::T.untyped)
   OPERATIONS = ::T.let(nil, ::T.untyped)
 end
 
-module Sass::Selector
-  SPECIFICITY_BASE = ::T.let(nil, ::T.untyped)
+module SassC::Script::ValueConversion
+  SEPARATORS = ::T.let(nil, ::T.untyped)
 end
 
-class Sass::Selector::Pseudo
-  ACTUALLY_ELEMENTS = ::T.let(nil, ::T.untyped)
-end
-
-class Sass::Tree::RuleNode
-  PARENT = ::T.let(nil, ::T.untyped)
-end
-
-class Sass::Tree::Visitors::CheckNesting
-  CONTROL_NODES = ::T.let(nil, ::T.untyped)
-  INVALID_IMPORT_PARENTS = ::T.let(nil, ::T.untyped)
-  SCRIPT_NODES = ::T.let(nil, ::T.untyped)
-  VALID_EXTEND_PARENTS = ::T.let(nil, ::T.untyped)
-  VALID_FUNCTION_CHILDREN = ::T.let(nil, ::T.untyped)
-  VALID_PROP_CHILDREN = ::T.let(nil, ::T.untyped)
-  VALID_PROP_PARENTS = ::T.let(nil, ::T.untyped)
-end
-
-class Sass::Tree::Visitors::ToCss
-  NEWLINE = ::T.let(nil, ::T.untyped)
-end
-
-module Sass::Util
-  ATOMIC_WRITE_MUTEX = ::T.let(nil, ::T.untyped)
-  BASE64_DIGITS = ::T.let(nil, ::T.untyped)
-  BASE64_DIGIT_MAP = ::T.let(nil, ::T.untyped)
-  CHARSET_REGEXP = ::T.let(nil, ::T.untyped)
+module SassC::Util
   RUBY_ENGINE = ::T.let(nil, ::T.untyped)
   RUBY_VERSION_COMPONENTS = ::T.let(nil, ::T.untyped)
-  UTF_16BE_BOM = ::T.let(nil, ::T.untyped)
-  UTF_16LE_BOM = ::T.let(nil, ::T.untyped)
-  UTF_8_BOM = ::T.let(nil, ::T.untyped)
-  VLQ_BASE = ::T.let(nil, ::T.untyped)
-  VLQ_BASE_MASK = ::T.let(nil, ::T.untyped)
-  VLQ_BASE_SHIFT = ::T.let(nil, ::T.untyped)
-  VLQ_CONTINUATION_BIT = ::T.let(nil, ::T.untyped)
 end
 
 ScanError = StringScanner::Error
@@ -18164,6 +18208,8 @@ class Sorbet::Private::RequireEverything
 
   def self.rails?(); end
 
+  def self.rb_file_paths(); end
+
   def self.require_all_files(); end
 
   def self.require_everything(); end
@@ -18259,8 +18305,6 @@ module Sprockets
 end
 
 Sprockets::Autoload::CoffeeScript = CoffeeScript
-
-Sprockets::Autoload::Sass = Sass
 
 Sprockets::Autoload::Uglifier = Uglifier
 
@@ -18468,16 +18512,6 @@ class Sprockets::SassCompressor
 end
 
 Sprockets::SassFunctions = Sprockets::SassProcessor::Functions
-
-class Sprockets::SassProcessor::CacheStore
-  def initialize(cache, version); end
-
-  def path_to(key); end
-  VERSION = ::T.let(nil, ::T.untyped)
-end
-
-class Sprockets::SassProcessor::CacheStore
-end
 
 class Sprockets::SassTemplate
 end
@@ -19396,7 +19430,7 @@ class Tilt::SassTemplate
   def allows_script?(); end
 end
 
-Tilt::SassTemplate::Sass = Sass
+Tilt::SassTemplate::Sass = SassC
 
 class Tilt::SassTemplate
 end

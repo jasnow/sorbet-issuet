@@ -12450,6 +12450,33 @@ end
 
 Mutex = Thread::Mutex
 
+module NIO
+  ENGINE = ::T.let(nil, ::T.untyped)
+  VERSION = ::T.let(nil, ::T.untyped)
+end
+
+class NIO::ByteBuffer
+  include ::Enumerable
+end
+
+class NIO::ByteBuffer::MarkUnsetError
+end
+
+class NIO::ByteBuffer::MarkUnsetError
+end
+
+class NIO::ByteBuffer::OverflowError
+end
+
+class NIO::ByteBuffer::OverflowError
+end
+
+class NIO::ByteBuffer::UnderflowError
+end
+
+class NIO::ByteBuffer::UnderflowError
+end
+
 class NameError
   include ::DidYouMean::Correctable
   def name(); end
@@ -12491,15 +12518,11 @@ end
 class Net::HTTPAlreadyReported
 end
 
+Net::HTTPClientError::EXCEPTION_TYPE = Net::HTTPServerException
+
 Net::HTTPClientErrorCode = Net::HTTPClientError
 
-class Net::HTTPClientError
-end
-
-Net::HTTPFatalErrorCode::EXCEPTION_TYPE = Net::HTTPServerException
-
-class Net::HTTPClientError
-end
+Net::HTTPFatalErrorCode = Net::HTTPClientError
 
 class Net::HTTPGenericRequest
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
@@ -12549,13 +12572,9 @@ end
 class Net::HTTPProcessing
 end
 
-class Net::HTTPRedirection
-end
+Net::HTTPRedirection::EXCEPTION_TYPE = Net::HTTPRetriableError
 
-Net::HTTPRedirectionCode::EXCEPTION_TYPE = Net::HTTPRetriableError
-
-class Net::HTTPRedirection
-end
+Net::HTTPRedirectionCode = Net::HTTPRedirection
 
 Net::HTTPRequestURITooLarge = Net::HTTPRequestURITooLong
 
@@ -12571,13 +12590,9 @@ end
 
 Net::HTTPRetriableCode = Net::HTTPRedirection
 
-class Net::HTTPServerError
-end
+Net::HTTPServerError::EXCEPTION_TYPE = Net::HTTPFatalError
 
-Net::HTTPServerErrorCode::EXCEPTION_TYPE = Net::HTTPFatalError
-
-class Net::HTTPServerError
-end
+Net::HTTPServerErrorCode = Net::HTTPServerError
 
 class Net::HTTP
 end
@@ -14347,10 +14362,6 @@ class Puma::Client
   EmptyBody = ::T.let(nil, ::T.untyped)
 end
 
-class Puma::Cluster
-  WORKER_CHECK_INTERVAL = ::T.let(nil, ::T.untyped)
-end
-
 module Puma::ConfigDefault
   DefaultRackup = ::T.let(nil, ::T.untyped)
   DefaultTCPHost = ::T.let(nil, ::T.untyped)
@@ -14399,6 +14410,9 @@ module Puma::Const
   HTTP_HOST = ::T.let(nil, ::T.untyped)
   HTTP_VERSION = ::T.let(nil, ::T.untyped)
   HTTP_X_FORWARDED_FOR = ::T.let(nil, ::T.untyped)
+  HTTP_X_FORWARDED_PROTO = ::T.let(nil, ::T.untyped)
+  HTTP_X_FORWARDED_SCHEME = ::T.let(nil, ::T.untyped)
+  HTTP_X_FORWARDED_SSL = ::T.let(nil, ::T.untyped)
   KEEP_ALIVE = ::T.let(nil, ::T.untyped)
   LINE_END = ::T.let(nil, ::T.untyped)
   LOCALHOST = ::T.let(nil, ::T.untyped)
@@ -14435,6 +14449,7 @@ module Puma::Const
   TRANSFER_ENCODING2 = ::T.let(nil, ::T.untyped)
   TRANSFER_ENCODING_CHUNKED = ::T.let(nil, ::T.untyped)
   VERSION = ::T.let(nil, ::T.untyped)
+  WORKER_CHECK_INTERVAL = ::T.let(nil, ::T.untyped)
   WRITE_TIMEOUT = ::T.let(nil, ::T.untyped)
 end
 
@@ -14454,6 +14469,9 @@ end
 
 module Puma::MiniSSL
   OPENSSL_LIBRARY_VERSION = ::T.let(nil, ::T.untyped)
+  OPENSSL_NO_SSL3 = ::T.let(nil, ::T.untyped)
+  OPENSSL_NO_TLS1 = ::T.let(nil, ::T.untyped)
+  OPENSSL_NO_TLS1_1 = ::T.let(nil, ::T.untyped)
   OPENSSL_VERSION = ::T.let(nil, ::T.untyped)
   VERIFY_FAIL_IF_NO_PEER_CERT = ::T.let(nil, ::T.untyped)
   VERIFY_NONE = ::T.let(nil, ::T.untyped)

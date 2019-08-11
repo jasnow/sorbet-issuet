@@ -12355,7 +12355,21 @@ class MiniMime::Info
   BINARY_ENCODINGS = ::T.let(nil, ::T.untyped)
 end
 
-MiniTest = Minitest
+module Minitest
+end
+
+MiniTest::Assertions = Minitest::Assertions
+
+MiniTest::Guard = Minitest::Guard
+
+MiniTest::Reportable = Minitest::Reportable
+
+MiniTest::Runnable = Minitest::Runnable
+
+MiniTest::Test = Minitest::Test
+
+module Minitest
+end
 
 module Minitest
   ENCS = ::T.let(nil, ::T.untyped)
@@ -12511,6 +12525,8 @@ class Net::HTTP
   ENVIRONMENT_VARIABLE_IS_MULTIUSER_SAFE = ::T.let(nil, ::T.untyped)
 end
 
+Net::HTTP::ProxyMod = Net::HTTP::ProxyDelta
+
 class Net::HTTPAlreadyReported
   HAS_BODY = ::T.let(nil, ::T.untyped)
 end
@@ -12532,13 +12548,9 @@ class Net::HTTPGenericRequest::Chunker
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
 end
 
-class Net::HTTPInformation
-end
+Net::HTTPInformation::EXCEPTION_TYPE = Net::HTTPError
 
-Net::HTTPInformationCode::EXCEPTION_TYPE = Net::HTTPError
-
-class Net::HTTPInformation
-end
+Net::HTTPInformationCode = Net::HTTPInformation
 
 class Net::HTTPLoopDetected
   HAS_BODY = ::T.let(nil, ::T.untyped)
@@ -12594,23 +12606,11 @@ Net::HTTPServerError::EXCEPTION_TYPE = Net::HTTPFatalError
 
 Net::HTTPServerErrorCode = Net::HTTPServerError
 
-class Net::HTTP
-end
+Net::HTTPSession = Net::HTTP
 
-Net::HTTPSession::ProxyDelta = Net::HTTP::ProxyDelta
+Net::HTTPSuccess::EXCEPTION_TYPE = Net::HTTPError
 
-Net::HTTPSession::ProxyMod = Net::HTTP::ProxyDelta
-
-class Net::HTTP
-end
-
-class Net::HTTPSuccess
-end
-
-Net::HTTPSuccessCode::EXCEPTION_TYPE = Net::HTTPError
-
-class Net::HTTPSuccess
-end
+Net::HTTPSuccessCode = Net::HTTPSuccess
 
 Net::HTTPUnknownResponse::EXCEPTION_TYPE = Net::HTTPError
 
@@ -13457,6 +13457,48 @@ end
 
 class OptionParser::Switch
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
+end
+
+module Parlour
+  VERSION = ::T.let(nil, ::T.untyped)
+end
+
+class Parlour::ConflictResolver
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
+class Parlour::Plugin
+  extend ::T::Private::Abstract::Hooks
+  extend ::T::InterfaceWrapper::Helpers
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
+class Parlour::RbiGenerator::Options
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
+class Parlour::RbiGenerator::Parameter
+  PREFIXES = ::T.let(nil, ::T.untyped)
+end
+
+class Parlour::RbiGenerator::Parameter
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
+class Parlour::RbiGenerator::RbiObject
+  extend ::T::Private::Abstract::Hooks
+  extend ::T::InterfaceWrapper::Helpers
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
+class Parlour::RbiGenerator
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
 end
 
 ParseError = Racc::ParseError
@@ -18154,6 +18196,25 @@ class Sorbet::Private::TodoRBI
   def self.main(); end
 
   def self.output_file(); end
+end
+
+SorbetRails::ModelPlugins::Base::Parameter = Parlour::RbiGenerator::Parameter
+
+module SorbetRails::ModelPlugins
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
+class SorbetRails::ModelRbiFormatter
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
+module SorbetRails::ModelUtils
+  extend ::T::Private::Abstract::Hooks
+  extend ::T::InterfaceWrapper::Helpers
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
 end
 
 class SortedSet

@@ -2243,10 +2243,43 @@ class ActiveRecord::InternalMetadata
   include ::ActiveRecord::InternalMetadata::GeneratedAssociationMethods
 end
 
+class ActiveRecord::InternalMetadata::ActiveRecord_AssociationRelation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::ActiveRecord::InternalMetadata::GeneratedRelationMethods
+end
+
+class ActiveRecord::InternalMetadata::ActiveRecord_AssociationRelation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class ActiveRecord::InternalMetadata::ActiveRecord_Associations_CollectionProxy
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::ActiveRecord::InternalMetadata::GeneratedRelationMethods
+end
+
+class ActiveRecord::InternalMetadata::ActiveRecord_Associations_CollectionProxy
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class ActiveRecord::InternalMetadata::ActiveRecord_Relation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::ActiveRecord::InternalMetadata::GeneratedRelationMethods
+end
+
+class ActiveRecord::InternalMetadata::ActiveRecord_Relation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
 module ActiveRecord::InternalMetadata::GeneratedAssociationMethods
 end
 
 module ActiveRecord::InternalMetadata::GeneratedAssociationMethods
+end
+
+module ActiveRecord::InternalMetadata::GeneratedRelationMethods
+end
+
+module ActiveRecord::InternalMetadata::GeneratedRelationMethods
 end
 
 class ActiveRecord::InternalMetadata
@@ -3401,10 +3434,43 @@ class ApplicationRecord
   include ::ApplicationRecord::GeneratedAssociationMethods
 end
 
+class ApplicationRecord::ActiveRecord_AssociationRelation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::ApplicationRecord::GeneratedRelationMethods
+end
+
+class ApplicationRecord::ActiveRecord_AssociationRelation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class ApplicationRecord::ActiveRecord_Associations_CollectionProxy
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::ApplicationRecord::GeneratedRelationMethods
+end
+
+class ApplicationRecord::ActiveRecord_Associations_CollectionProxy
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class ApplicationRecord::ActiveRecord_Relation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::ApplicationRecord::GeneratedRelationMethods
+end
+
+class ApplicationRecord::ActiveRecord_Relation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
 module ApplicationRecord::GeneratedAssociationMethods
 end
 
 module ApplicationRecord::GeneratedAssociationMethods
+end
+
+module ApplicationRecord::GeneratedRelationMethods
+end
+
+module ApplicationRecord::GeneratedRelationMethods
 end
 
 module Arel
@@ -9333,10 +9399,6 @@ class Numeric
   def finite?(); end
 
   def infinite?(); end
-
-  def negative?(); end
-
-  def positive?(); end
 
   EXABYTE = ::T.let(nil, ::T.untyped)
   GIGABYTE = ::T.let(nil, ::T.untyped)

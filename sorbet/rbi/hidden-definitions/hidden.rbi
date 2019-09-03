@@ -3363,6 +3363,30 @@ module ActiveSupport::XmlMini_REXML
   CONTENT_KEY = ::T.let(nil, ::T.untyped)
 end
 
+module ApplicationCable
+end
+
+class ApplicationCable::Channel
+end
+
+class ApplicationCable::Channel
+end
+
+class ApplicationCable::Connection
+end
+
+class ApplicationCable::Connection
+end
+
+module ApplicationCable
+end
+
+class ApplicationJob
+end
+
+class ApplicationJob
+end
+
 class ApplicationRecord
   include ::ApplicationRecord::GeneratedAssociationMethods
 end
@@ -3404,6 +3428,9 @@ module ApplicationRecord::GeneratedRelationMethods
 end
 
 module ApplicationRecord::GeneratedRelationMethods
+end
+
+class ApplicationRecord
 end
 
 module Arel

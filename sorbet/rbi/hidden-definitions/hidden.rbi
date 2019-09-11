@@ -3489,6 +3489,7 @@ class Array
   def to_csv(**options); end
 
   def to_h(); end
+
 end
 
 class Array
@@ -4898,6 +4899,7 @@ end
 class Enumerator
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
   def each_with_index(); end
+
 end
 
 class Enumerator::Generator
@@ -5137,6 +5139,7 @@ end
 class Exception
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
   def full_message(*_); end
+
 end
 
 class Exception
@@ -5443,6 +5446,7 @@ class File
   def self.mkfifo(*_); end
 
   def self.probe_stat_in(dir); end
+
 end
 
 module FileUtils
@@ -6262,6 +6266,7 @@ class IO
   def self.foreach(*_); end
 
   def self.pipe(*_); end
+
 end
 
 class IPAddr
@@ -8448,8 +8453,6 @@ MiniTest::Runnable = Minitest::Runnable
 
 MiniTest::Test = Minitest::Test
 
-MiniTest = Minitest
-
 module Minitest
 end
 
@@ -8705,6 +8708,7 @@ end
 
 class Net::IMAP
   def open_timeout(); end
+
   RESPONSE_ERRORS = ::T.let(nil, ::T.untyped)
 end
 
@@ -9544,6 +9548,7 @@ class Pathname
   def glob(*_); end
 
   def make_symlink(_); end
+
 end
 
 class PrettyPrint
@@ -9591,6 +9596,7 @@ end
 
 module Process::Sys
   def self.getegid(); end
+
 end
 
 class Process::Tms
@@ -9621,6 +9627,7 @@ module Process
   def self.last_status(); end
 
   def self.setpgrp(); end
+
 end
 
 module Psych
@@ -11786,6 +11793,7 @@ end
 
 module Random::Formatter
   def alphanumeric(n=T.unsafe(nil)); end
+
   ALPHANUMERIC = ::T.let(nil, ::T.untyped)
 end
 
@@ -14114,6 +14122,7 @@ class String
   def unicode_normalized?(*_); end
 
   def unpack1(_); end
+
   BLANK_RE = ::T.let(nil, ::T.untyped)
   ENCODED_BLANKS = ::T.let(nil, ::T.untyped)
 end
@@ -14122,6 +14131,7 @@ class StringIO
   def length(); end
 
   def truncate(_); end
+
 end
 
 class StringScanner

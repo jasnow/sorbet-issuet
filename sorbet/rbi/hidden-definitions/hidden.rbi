@@ -5246,6 +5246,7 @@ end
 
 module Exception2MessageMapper
   def bind(cl); end
+
 end
 
 Exception2MessageMapper::E2MM = Exception2MessageMapper
@@ -5540,6 +5541,8 @@ class File
   def self.lutime(*_); end
 
   def self.mkfifo(*_); end
+
+  def self.probe_stat_in(dir); end
 
 end
 
@@ -8711,15 +8714,15 @@ end
 class Net::HTTPAlreadyReported
 end
 
-Net::HTTPClientErrorCode = Net::HTTPClientError
+class Net::HTTPClientError
+end
+
+Net::HTTPClientErrorCode::EXCEPTION_TYPE = Net::HTTPServerException
 
 class Net::HTTPClientError
 end
 
-Net::HTTPFatalErrorCode::EXCEPTION_TYPE = Net::HTTPServerException
-
-class Net::HTTPClientError
-end
+Net::HTTPFatalErrorCode = Net::HTTPClientError
 
 class Net::HTTPGenericRequest
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
@@ -8769,7 +8772,13 @@ end
 class Net::HTTPProcessing
 end
 
-Net::HTTPRedirectionCode = Net::HTTPRedirection
+class Net::HTTPRedirection
+end
+
+Net::HTTPRedirectionCode::EXCEPTION_TYPE = Net::HTTPRetriableError
+
+class Net::HTTPRedirection
+end
 
 Net::HTTPRequestURITooLarge = Net::HTTPRequestURITooLong
 
@@ -8783,13 +8792,7 @@ class Net::HTTPResponse::Inflater
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
 end
 
-class Net::HTTPRedirection
-end
-
-Net::HTTPRetriableCode::EXCEPTION_TYPE = Net::HTTPRetriableError
-
-class Net::HTTPRedirection
-end
+Net::HTTPRetriableCode = Net::HTTPRedirection
 
 class Net::HTTPServerError
 end

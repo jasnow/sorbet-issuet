@@ -1535,14 +1535,6 @@
 # uninitialized constant ActiveSupport::TestCase::TEARDOWN_METHODS
 # uninitialized constant ActiveSupport::TestCase::UNDEFINED
 # uninitialized constant ActiveSupport::TestCase::UNTRACKED
-# wrong constant name <Class:Channel>
-# wrong constant name <Class:Connection>
-# uninitialized constant ApplicationCable::Channel::CALLBACK_FILTER_TYPES
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# uninitialized constant ApplicationJob::CALLBACK_FILTER_TYPES
-# wrong constant name <static-init>
 # uninitialized constant ApplicationRecord::ACTIONS
 # wrong constant name <Class:ActiveRecord_AssociationRelation>
 # wrong constant name <Class:ActiveRecord_Associations_CollectionProxy>
@@ -1600,7 +1592,6 @@
 # A copy of ApplicationRecord::ActiveRecord_Relation has been removed from the module tree but is still active!
 # A copy of ApplicationRecord::ActiveRecord_Relation has been removed from the module tree but is still active!
 # A copy of ApplicationRecord::ActiveRecord_Relation has been removed from the module tree but is still active!
-# wrong constant name <static-init>
 # wrong constant name <static-init>
 # wrong constant name <static-init>
 # wrong constant name <static-init>

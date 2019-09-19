@@ -2985,6 +2985,8 @@ end
 
 class Bundler::FeatureFlag
   def github_https?(); end
+
+  def lockfile_upgrade_warning?(); end
 end
 
 class Bundler::Fetcher
@@ -3356,7 +3358,6 @@ class Bundler::Retry
 end
 
 class Bundler::RubyGemsGemInstaller
-  def initialize(gem, options=T.unsafe(nil)); end
 end
 
 class Bundler::Settings::Mirror
@@ -6733,10 +6734,9 @@ class Net::HTTPAlreadyReported
   HAS_BODY = ::T.let(nil, ::T.untyped)
 end
 
-class Net::HTTPClientError
-end
+Net::HTTPClientError::EXCEPTION_TYPE = Net::HTTPServerException
 
-Net::HTTPClientErrorCode::EXCEPTION_TYPE = Net::HTTPServerException
+Net::HTTPClientErrorCode = Net::HTTPClientError
 
 Net::HTTPFatalErrorCode = Net::HTTPClientError
 
@@ -6773,10 +6773,9 @@ class Net::HTTPProcessing
   HAS_BODY = ::T.let(nil, ::T.untyped)
 end
 
-class Net::HTTPRedirection
-end
+Net::HTTPRedirection::EXCEPTION_TYPE = Net::HTTPRetriableError
 
-Net::HTTPRedirectionCode::EXCEPTION_TYPE = Net::HTTPRetriableError
+Net::HTTPRedirectionCode = Net::HTTPRedirection
 
 Net::HTTPRequestURITooLarge = Net::HTTPRequestURITooLong
 
@@ -6792,10 +6791,9 @@ end
 
 Net::HTTPRetriableCode = Net::HTTPRedirection
 
-class Net::HTTPServerError
-end
+Net::HTTPServerError::EXCEPTION_TYPE = Net::HTTPFatalError
 
-Net::HTTPServerErrorCode::EXCEPTION_TYPE = Net::HTTPFatalError
+Net::HTTPServerErrorCode = Net::HTTPServerError
 
 class Net::HTTP
 end
@@ -6804,10 +6802,9 @@ Net::HTTPSession::ProxyDelta = Net::HTTP::ProxyDelta
 
 Net::HTTPSession::ProxyMod = Net::HTTP::ProxyDelta
 
-class Net::HTTPSuccess
-end
+Net::HTTPSuccess::EXCEPTION_TYPE = Net::HTTPError
 
-Net::HTTPSuccessCode::EXCEPTION_TYPE = Net::HTTPError
+Net::HTTPSuccessCode = Net::HTTPSuccess
 
 Net::HTTPUnknownResponse::EXCEPTION_TYPE = Net::HTTPError
 

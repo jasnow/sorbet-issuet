@@ -1378,6 +1378,7 @@
 # wrong constant name clone
 # wrong constant name irb
 # wrong constant name github_https?
+# wrong constant name lockfile_upgrade_warning?
 # wrong constant name <Class:Base>
 # wrong constant name <Class:CompactIndex>
 # wrong constant name <Class:Dependency>
@@ -1538,7 +1539,6 @@
 # wrong constant name total_runs
 # wrong constant name total_runs=
 # uninitialized constant Bundler::RubyGemsGemInstaller::ENV_PATHS
-# wrong constant name initialize
 # wrong constant name ==
 # wrong constant name fallback_timeout
 # wrong constant name fallback_timeout=
